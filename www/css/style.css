@@ -1,0 +1,32 @@
+/* Empty. Add your own CSS if you like */
+
+.center{
+	text-align: center;
+}
+
+.item {
+    border-color: transparent;
+}
+
+/*Buttons styles*/
+
+.button.button-wish{
+	width: 110px;
+	border-color: #ee2d56;
+    background: transparent;
+    color: #ee2d56;
+    border-radius:0; 
+}
+.button.button-wish.active, .button.button-wish.activated{
+	background-color: #ee2d56;
+    box-shadow: none;
+    color: #fff;
+}
+
+/*Footer styles*/
+.bar-footer {
+	height: 80px;
+}
+.terms{
+	width: 100%;
+}
