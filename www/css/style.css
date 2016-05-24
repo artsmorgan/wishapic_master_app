@@ -1,11 +1,116 @@
 /* Empty. Add your own CSS if you like */
 
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+/*                   WEB FONTS                         */
+/*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
+@font-face {
+    font-family: 'HelveticaNeueLTStd';
+    src: url('font/HelveticaNeueLTStd');
+    src: url('font/HelveticaNeueLTStd') format('embedded-opentype'),
+         url('font/HelveticaNeueLTStd.woff') format('woff'),
+         url('font/HelveticaNeueLTStd.ttf') format('truetype'),
+         url('font/HelveticaNeueLTStd.svg#HelveticaNeueLTStd') format('svg');
+}
+
+@font-face {
+    font-family: 'Quicksand-Bold';
+    src: url('font/Quicksand-Bold');
+    src: url('font/Quicksand-Bold') format('embedded-opentype'),
+         url('font/Quicksand-Bold.woff') format('woff'),
+         url('font/Quicksand-Bold.ttf') format('truetype'),
+         url('font/Quicksand-Bold.svg#Quicksand-Bold') format('svg');
+}
+/*-*-*-*-*-*-* Header*-*-*-*-*-*/
+.bar-header{
+	background-color: transparent;
+	border-color: transparent;
+}
+
+.bar-header a i{
+	font-size: 35px;
+	font-weight: 
+}
+
+/*-*-*-*-*-*-* Titles size*-*-*-*-*-*/
+h1 { font-size: 36px!important;}
+h2 { font-size: 22px!important;}
+h3 { font-size: 18px!important;}
+h4 { font-size: 16px!important;}
+h5 { font-size: 12px!important;}
+h6 { font-size: 10px!important;}
+
+/*-*-*-*-*-Placeholder styles-*-*-*-*-*-*/
+::-webkit-input-placeholder {
+   color: #fff!important;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: red;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: red;  
+}
+
+:-ms-input-placeholder {  
+   color: red;  
+}
+
+
+.pane, .pane h1{
+	/*font-family: 'HelveticaNeueLTStd', Helvetica, Arial, sans-serif;*/
+    /*font-family: 'Quicksand-Bold', Helvetica, Arial, sans-serif;*/
+}
+.home{
+	 background: linear-gradient(transparent 0%,#000 150%), url("../img/test1.jpg") no-repeat center center; 
+
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+
+}
+.background{
+	 background: linear-gradient(transparent 0%,#000 150%), url("../img/test2.jpg") no-repeat center center; 
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+
+}
+.background2{
+	 background: linear-gradient(transparent 0%,#000 150%), url("../img/test3.jpg") no-repeat center center; 
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+
+}
 .center{
 	text-align: center;
 }
-
+.list h1, .list h2, .list h6, .list p, .list i{
+	color: #fff;
+}
+.list i{
+	font-size: 20px;
+	padding-right: 10px; 
+}
+.item p a, .item a{
+	color: #fff;
+	text-decoration: none;
+}
+.item p a:active, .item a:active{
+	color: #ee2d56;
+}
 .item {
     border-color: transparent;
+    background: transparent;
+}
+
+.item label{
+	border-bottom: solid 1px;
+}
+.item input[type="text"], .item input[type="password"]{
+	color: #fff;
+
 }
 
 /*Buttons styles*/
@@ -24,8 +129,10 @@
 }
 
 /*Footer styles*/
+
 .bar-footer {
-	height: 80px;
+	height: 90px;
+	background: transparent;
 }
 .terms{
 	width: 100%;
