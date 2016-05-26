@@ -3,7 +3,11 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-var app = angular.module('starter', ['ionic']);
+var app = angular.module('starter', [
+    'ionic',
+    'ngStorage',
+    'angular-loading-bar'
+    ]);
 
 app.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -23,43 +27,24 @@ app.run(function($ionicPlatform) {
   });
 })
 
+//App Config
+app.config(function ($httpProvider) {
 
-app.config(function($stateProvider, $urlRouterProvider) {
-
-  // Ionic uses AngularUI Router which uses the concept of states
-  // Learn more here: https://github.com/angular-ui/ui-router
-  // Set up the various states which the app can be in.
-  // Each state's controller can be found in controllers.js
-  $stateProvider
-   //setup state for Home
-  .state('home', {
-      url: '/home',
-      templateUrl: 'templates/home.html'
-  })
-
- //setup state for login 
-  .state('login', {
-      url: '/login',
-      templateUrl: 'templates/login.html'
-  })
-
- //setup state for Get Started 
-  .state('getStarted', {
-      url: '/getStarted',
-      templateUrl: 'templates/getStarted.html'
-  })
-
-  //setup state for Forgot Password
-  .state('forgotPass', {
-      url: '/forgotPass',
-      templateUrl: 'templates/ForgotPass.html'
-  })
-
-  //setup state for Confirm Email
-  .state('confirmEmail', {
-      url: '/confirmEmail',
-      templateUrl: 'templates/confirmEmail.html'
-  })
-
-  $urlRouterProvider.otherwise('/home');
+  $httpProvider.interceptors.push(['$q', '$location', '$localStorage', function($q, $location, $localStorage) {
+        return {
+                'request': function (config) {
+                    config.headers = config.headers || {};
+                    if ($localStorage.token) {
+                        config.headers.Authorization = 'Bearer ' + $localStorage.token;
+                    }
+                    return config;
+                },
+                'responseError': function(response) {
+                    if(response.status === 401 || response.status === 403) {
+                        $location.path('/signin');
+                    }
+                    return $q.reject(response);
+                }
+            };
+        }]);
 })

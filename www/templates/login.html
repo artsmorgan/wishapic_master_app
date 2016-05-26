@@ -1,4 +1,4 @@
-<ion-view view-title="Login" name="login-view" class="background">
+<ion-view view-title="Login" name="login-view" class="background" id="login" ng-controller="LoginCtrl">
   <div class="bar bar-header">
     <div class="list">
       <div class="item">
@@ -13,22 +13,26 @@
           <h2>LOGIN</h2>
         </div>
         <div class="item"></div>
-        <div class="item">
-           <label class="item item-input">
-            <i class="icon ion-ios-email-outline"></i>
-              <input  type="text" placeholder="Username or Email" ng-model="data.username">
-          </label>
-          <label class="item item-input">
-              <i class="ion-ios-locked-outline"></i>
-              <input type="password" placeholder="Password" ng-model="data.password">
-          </label>
+        <form ng-submit="signin()">
+          <div class="item">
+             <label class="item item-input">
+              <i class="icon ion-ios-email-outline"></i>
+                <input  type="text" placeholder="Username or Email" name="email" id="email" ng-model="model.email">
+            </label>
+            <label class="item item-input">
+                <i class="ion-ios-locked-outline"></i>
+                <input type="password" placeholder="Password" name="password" id="password" ng-model="model.password">
+            </label>
+          </div>
+          <div class="item">
+            <a href="#/forgotPass">Forgot Password?</a>
+          </div>
+          <div class="item"></div>
+          <div class="item"></div>
+          <div class="item">
+            <button class="button button-outline button-wish" type="submit">Login</button>
+          </div>
         </div>
-        <div class="item">
-          <a href="#/forgotPass">Forgot Password?</a>
-        </div>
-        <div class="item"></div>
-        <div class="item"></div>
-        <div class="item"><button class="button button-outline button-wish" ui-sref="">Login</button></div>
-      </div>
+      </form>
   </ion-content>
 </ion-view>

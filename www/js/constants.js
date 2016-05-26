@@ -4,7 +4,10 @@ var SETTINGS = {};
 
 
 var CONSTANTS = {};
-	CONSTANTS.homeId = 1;
+	CONSTANTS.pageId = {
+		home  : 1,
+		login : 2,
+	}
 
 var Env = function(){
 	local = true;
