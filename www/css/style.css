@@ -20,6 +20,15 @@
          url('font/Quicksand-Bold.ttf') format('truetype'),
          url('font/Quicksand-Bold.svg#Quicksand-Bold') format('svg');
 }
+/*-*-*-*-*-*-* Elements*-*-*-*-*-*/
+select{
+    background: transparent;
+    border:none;
+    color:#fff;
+}
+select option{
+    color: #000;
+}
 /*-*-*-*-*-*-* Header*-*-*-*-*-*/
 .bar-header{
 	background-color: transparent;
@@ -112,9 +121,8 @@ h6 { font-size: 10px!important;}
 .item label{
 	border-bottom: solid 1px;
 }
-.item input[type="text"], .item input[type="password"]{
+.item input[type="text"], .item input[type="password"], .item input[type="number"]{
 	color: #fff;
-
 }
 
 /*Buttons styles*/
