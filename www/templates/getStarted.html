@@ -2,21 +2,60 @@
 	<div class="bar bar-header">
     <div class="list">
       <div class="item">
-        <a href="#/home"><i class="ion-ios-arrow-thin-left"></i></a>
+        <a class="arrow" href="#/home"><i class="ion-ios-arrow-thin-left"></i></a>
       </div>
     </div>
 </div>
 	<ion-content class="padding center">
 		<div class="list">
-		        <div class="item"></div>
-		        <div class="item">
+            <div class="item"></div>
+            <div class="item">
 		          <h2>GET STARTED</h2>
-		        </div>
-		        <div class="item"></div>
-		        <div class="item"></div>
-		        <div class="item"></div>
-		
-			<div class="item"><button class="button button-outline button-wish" ui-sref="confirmEmail">Join</button></div>
+            </div>
+            <div class="item"></div>
+            
+            <div class="item">
+		    <form ng-submit="">     
+                 <label class="item item-input">
+                    <i class="icon ion-ios-person-outline"></i>
+                    <input  type="text" placeholder="Enter username" name="username" id="username" ng-model="model.username">
+                </label>
+                <label class="item item-input">
+                    <i class="icon ion-ios-email-outline"></i>
+                    <input  type="text" placeholder="Enter email adress" name="email" id="email" ng-model="model.email">
+                </label>
+                <div>
+                    <label class="item item-input">
+                         <i class="no-icon"></i>
+                    <input  type="text" placeholder="Age" name="age" id="age" ng-model="model.age">
+                </label>
+                <label class="item item-input">
+                     <i class="no-icon"></i>
+                    <input  type="text" placeholder="Gender" name="gender" id="gender" ng-model="model.gender">
+                </label>
+                </div>
+                
+                <label class="item item-input">
+                     <i class="no-icon"></i>
+                    <input  type="text" placeholder="Country" name="country" id="country" ng-model="model.country">
+                </label>
+                <label class="item item-input">
+                <i class="ion-ios-locked-outline"></i>
+                <input type="password" placeholder="New Password" name="newpassword" id="newpassword" ng-model="newPass">
+            </label>
+              <label class="item item-input">
+                <i class="ion-ios-locked-outline"></i>
+                <input type="password" placeholder="Confirm Password" name="confpassword" id="confpassword" ng-model="confPass">
+            </label>
+                <div class="item"></div>
+                <div class="item"><button class="button button-outline button-wish" ui-sref="confirmEmail">Join</button></div>
+            </form>
+            </div>
 		</div>
 	</ion-content>
+    <ion-footer-bar class="center" >
+  <div class="list terms">
+    <div class="item"><p>By Joining Wish A Pic you agree to the </p><p><a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></p></div>
+  </div>
+  </ion-footer-bar>
 </ion-view>

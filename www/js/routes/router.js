@@ -35,6 +35,11 @@ app.config(function($stateProvider, $urlRouterProvider) {
       url: '/confirmEmail',
       templateUrl: 'templates/confirmEmail.html'
   })
+    //setup state for new Password
+  .state('newPassword', {
+      url: '/newPassword',
+      templateUrl: 'templates/newPassword.html'
+  })
 
   $urlRouterProvider.otherwise('/home');
 })
