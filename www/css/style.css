@@ -29,6 +29,33 @@ select{
 select option{
     color: #000;
 }
+
+.clear{
+    clear: both;
+}
+
+.message p{
+    font-size: 20px;
+    padding-bottom: 5px;
+}
+.pink{
+    color: #ee2d56!important;
+}
+
+.hidden{              /*To hide messages add the class hidden*/     
+    visibility: hidden;
+}
+
+.borderTop{
+    border-top: solid 1px #989da2!important;
+}
+.borderBottom{
+    border-bottom: solid 1px #989da2!important;
+}
+.nopadding{
+    padding-bottom: 0;
+    padding-top: 0;
+}
 /*-*-*-*-*-*-* Header*-*-*-*-*-*/
 .bar-header{
 	background-color: transparent;
@@ -106,6 +133,9 @@ h6 { font-size: 10px!important;}
 	font-size: 20px;
 	padding-right: 10px; 
 }
+.item p{
+    white-space: normal;
+}
 .item p a, .item a{
 	color: #fff;
 	text-decoration: none;
@@ -123,6 +153,12 @@ h6 { font-size: 10px!important;}
 }
 .item input[type="text"], .item input[type="password"], .item input[type="number"]{
 	color: #fff;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
 }
 
 /*Buttons styles*/
@@ -145,6 +181,18 @@ h6 { font-size: 10px!important;}
     padding-left: 12px;
 }
 
+.short-input{
+    display: inline-block;
+    float: left;
+}
+.short-input input[type="number"]{
+    width: 55px;
+}
+.short-input select{
+    padding-top: 8px;
+   padding-bottom: 8px;
+}
+
 /*Footer styles*/
 
 .bar-footer {
@@ -154,3 +202,4 @@ h6 { font-size: 10px!important;}
 .terms{
 	width: 100%;
 }
+
