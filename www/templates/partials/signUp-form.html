@@ -1,37 +1,38 @@
-<label class="item item-input">
-                    <i class="icon ion-ios-person-outline"></i>
-                    <input  type="text" placeholder="Enter username" name="username" id="username" ng-model="model.username">
-                </label>
+<label class="item item-input ">
+                      <i class="icon ion-ios-person-outline"></i>
+                      <input  type="text" placeholder="Enter username" name="username" id="username" ng-model="model.username">
+                  </label>
+                  <label class="item item-input">
+                      <i class="icon ion-ios-email-outline"></i>
+                      <input type="text" placeholder="Enter email adress" name="email" id="email" ng-model="model.email">
+                  </label>
+                  <div>
+                      <label class="short-input item item-input">
+                      <input  type="number" ng-maxlength="2" placeholder="Age" name="age" id="age" ng-model="model.age">
+                  </label>
+                  <label class="short-input item item-input">   
+                      <select >
+                          <option value="" disabled selected>Gender</option>
+                          <option value="f" checked="true">Female</option>
+                          <option value="m">Male</option>
+                      </select>
+                  </label>
+                  <div class="clear"></div>
+                  </div>
+                  <div class="clear"></div>
+                  <label class="item item-input">
+                       <i class="no-icon"></i>
+                      <input  type="text" placeholder="Country" name="country" id="country" ng-model="model.country">
+                  </label>
+                  <label class="item item-input">
+                  <i class="ion-ios-locked-outline"></i>
+                  <input type="password" placeholder="New Password" name="newpassword" id="newpassword" ng-model="newPass">
+              </label>
                 <label class="item item-input">
-                    <i class="icon ion-ios-email-outline"></i>
-                    <input  type="text" placeholder="Enter email adress" name="email" id="email" ng-model="model.email">
-                </label>
-                <div>
-                    <label class="item item-input">
-                         <i class="no-icon"></i>
-                    <input  type="number" placeholder="Age" name="age" id="age" ng-model="model.age">
-                </label>
-                     <label class="item item-input">
-                         <i class="no-icon"></i>
-                <select >
-                    <option value="" disabled selected>Gender</option>
-                    <option value="f" checked="true">Female</option>
-                    <option value="m">Male</option>
-                </select>
-                         </label>
-                </div>
-                
-                <label class="item item-input">
-                     <i class="no-icon"></i>
-                    <input  type="text" placeholder="Country" name="country" id="country" ng-model="model.country">
-                </label>
-                <label class="item item-input">
-                <i class="ion-ios-locked-outline"></i>
-                <input type="password" placeholder="New Password" name="newpassword" id="newpassword" ng-model="newPass">
-            </label>
-              <label class="item item-input">
-                <i class="ion-ios-locked-outline"></i>
-                <input type="password" placeholder="Confirm Password" name="confpassword" id="confpassword" ng-model="confPass">
-            </label>
-                <div class="item"></div>
-                <div class="item"><button class="button button-outline button-wish" ui-sref="confirmEmail">Join</button></div>
+                  <i class="ion-ios-locked-outline"></i>
+                  <input type="password" placeholder="Confirm Password" name="confpassword" id="confpassword" ng-model="confPass">
+              </label>
+                  </div>
+                  <div class="item ">
+                  <div class="item "></div>
+                  <div class="item"><button class="button button-outline button-wish" ui-sref="confirmEmail">Join</button></div>    
