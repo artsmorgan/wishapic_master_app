@@ -40,6 +40,36 @@ app.config(function($stateProvider, $urlRouterProvider) {
       url: '/newPassword',
       templateUrl: 'templates/newPassword.html'
   })
+  
+   //setup state for Profile
+  .state('profile', {
+      url: '/profile',
+      templateUrl: 'templates/profile.html'
+  })
+  
+    //setup state for Edit Profile
+  .state('editProfile', {
+      url: '/editProfile',
+      templateUrl: 'templates/editProfile.html'
+  })
+  
+  //setup state for Chat
+  .state('chat', {
+      url: '/chat',
+      templateUrl: 'templates/chat.html'
+  })
+  
+  //setup state for Ask for a Picture screen
+  .state('askPic', {
+      url: '/askPic',
+      templateUrl: 'templates/askPic.html'
+  })
+  
+  //setup state for Follower requests 
+  .state('FollowerRequest', {
+      url: '/followerRequest',
+      templateUrl: 'templates/followerRequest.html'
+  })
 
     //setup state for new Password
   .state('camera', {
