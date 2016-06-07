@@ -1,8 +1,8 @@
-<ion-view view-title="getStarted" class="background2">
+<ion-view view-title="profile" class="backgroundGray">
 	<div class="bar bar-header">
     <div class="list">
       <div class="item">
-        <a class="arrow" href="#/home"><i class="ion-ios-arrow-thin-left"></i></a>
+        <a class="arrow" href=""><i class="ion-ios-arrow-thin-left"></i></a>
       </div>
     </div>
 </div>
@@ -10,19 +10,24 @@
 		<div class="list">
             <div class="item"></div>
             <div class="item">
-		          <h2>GET STARTED</h2>
+                <img class="title-image" src="img/profile.jpg" width="110px" />
             </div>
-            <div class="item"></div>
-            
+            <div class="item">
+                <h2 class="bold">About you</h2>
+                <p>Lorem ipsum dolor</p>
+                <p>sit amet</p>
+                <p>consectetur adipiscing elit</p>
+                <p>Mauris id auctor</p>                
+            </div>
             <div class="item borderTop borderBottom nopadding">
 		    <form ng-submit="">     
                  <label class="item item-input ">
                     <i class="icon ion-ios-person-outline"></i>
-                    <input  type="text" placeholder="Enter username" name="username" id="username" ng-model="model.username">
+                      <input  type="text" placeholder="Username" name="username" id="username" ng-model="model.username">
                 </label>
                 <label class="item item-input">
                     <i class="icon ion-ios-email-outline"></i>
-                    <input type="text" placeholder="Enter email adress" name="email" id="email" ng-model="model.email">
+                    <input type="text" placeholder="test@test.com" name="email" id="email" ng-model="model.email">
                 </label>
                 <div>
                     <label class="short-input item item-input">
@@ -49,15 +54,20 @@
                 <i class="ion-ios-locked-outline"></i>
                 <input type="password" placeholder="Confirm Password" name="confpassword" id="confpassword" ng-model="confPass">
             </label>
+                </div> 
+                <div class="item"></div>
+                <div class="item">
+            <button class="button button-outline button-wish" type="submit">Save</button>
+          </div>
+        <div class="item">    
+            <label class=" noBorder checkbox item item-checkbox checkbox-wish ">Private Profile
+                <input type="checkbox">
+            </label>
+                <br/><a href="#" class="pink">Log out</a>
                 </div>
-                <div class="item ">
-                <div class="item "></div>
-                <div class="item"><button class="button button-outline button-wish" ui-sref="confirmEmail">Join</button></div>
-            </form>
-            </div>
 		</div>
 	</ion-content>
-    <ion-footer-bar class="center" >
+        <ion-footer-bar class="center" >
   <div class="list terms">
     <div class="item"><p>By Joining Wish A Pic you agree to the </p><p><a href="#" class="pink">Terms of Service</a> and <a href="#" class="pink">Privacy Policy</a></p></div>
   </div>

@@ -52,9 +52,37 @@ select option{
 .borderBottom{
     border-bottom: solid 1px #989da2!important;
 }
+
+.noBorder{
+    border-bottom: 0!important;
+}
 .nopadding{
     padding-bottom: 0;
     padding-top: 0;
+}
+
+.btn-yes{
+    display: inline-block;
+    background-color: #b3d3be;
+    padding: 2px 8px;
+    width:90px;
+    height: 90px;
+    border-radius: 50px;
+    text-decoration: none;   
+}
+
+.btn-no{  
+    display: inline-block;
+    background-color: #f09592;
+    padding: 2px 8px;
+    width:60px;
+    height:60px;
+    border-radius: 50px;
+    text-decoration: none;    
+}
+
+.rightSpace{
+    margin-right: 25px;
 }
 /*-*-*-*-*-*-* Header*-*-*-*-*-*/
 .bar-header{
@@ -137,11 +165,12 @@ h6 { font-size: 10px!important;}
     white-space: normal;
 }
 .item p a, .item a{
-	color: #fff;
+    color:#fff;
 	text-decoration: none;
 }
 .item p a:active, .item a:active{
-	color: #ee2d56;
+    color: #ee2d56;
+	text-decoration: underline;
 }
 .item {
     border-color: transparent;
@@ -149,7 +178,7 @@ h6 { font-size: 10px!important;}
 }
 
 .item label{
-	border-bottom: solid 1px;
+	border-bottom: solid 1px #989da2;
 }
 .item input[type="text"], .item input[type="password"], .item input[type="number"]{
 	color: #fff;
@@ -168,7 +197,7 @@ input[type=number]::-webkit-outer-spin-button {
 	border-color: #ee2d56;
     background: transparent;
     color: #ee2d56;
-    border-radius:0; 
+    border-radius:5px; 
 }
 .button.button-wish.active, .button.button-wish.activated{
 	background-color: #ee2d56;
@@ -176,14 +205,31 @@ input[type=number]::-webkit-outer-spin-button {
     color: #fff;
 }
 
+.checkbox-wish{
+    display: inline-flex!important; 
+    padding-left: 5px;}
+.checkbox-wish input{
+    margin-left: 20px;
+}
+.checkbox-wish input:before,
+.checkbox-wish .checkbox-icon:before {
+  border-color: #ee2d56;
+  background: transparent;}
+
+.checkbox-wish input:checked:before,
+.checkbox-wish input:checked + .checkbox-icon:before {
+  background: #ee2d56;
+  border-color: #ee2d56; }
+
 /*-*-*-*-*-*-Form Styles-*-*-*-*-*/
 .no-icon{
     padding-left: 12px;
 }
 
-.short-input{
+.short-input,{
     display: inline-block;
     float: left;
+    margin-right: 70px;
 }
 .short-input input[type="number"]{
     width: 55px;
@@ -191,6 +237,127 @@ input[type=number]::-webkit-outer-spin-button {
 .short-input select{
     padding-top: 8px;
    padding-bottom: 8px;
+}
+
+.table {
+	display: table;
+	margin: 0 auto;
+}
+
+ul#circleList {
+	min-width: 696px;
+	list-style: none;
+	padding-top: 20px;
+	}
+ul.circleList li{
+    float:left;
+   display: inline; 
+    margin: 0 15px;
+}
+
+ul.circleList li h6{
+    padding: 10px 0;
+}
+
+/*-*-*-*-*-*-Profiles-*-*-*-*-*/
+
+.backgroundGray{
+   background-color: #e9e9eb;
+}
+
+.backgroundGray p, .backgroundGray i, .backgroundGray h2,  .backgroundGray h6, .backgroundGray select, .backgroundGray input[type="text"], .backgroundGray .item input[type="password"], .backgroundGray input[type="number"], .backgroundGray ::-webkit-input-placeholder {
+   color: #7c7c7e !important; 
+}
+
+.backgroundGray img{
+    border-radius: 55px;
+}
+
+.backgroundGray input[type="search"]{
+    text-align: center;
+    background-color: #fff;
+}
+
+.bold{
+    font-weight: 500!important;
+}
+/*-*-*-*-*-*-Image borders-*-*-*-*-*/
+.backgroundGray .uppercase{
+    text-transform: uppercase;
+}
+.backgroundGray .red{
+    border: solid 6px #f09592;
+}
+.backgroundGray .green{
+    border: solid 6px #b3d3be;
+}
+
+.backgroundGray .blue{
+    border: solid 6px #5d7eb1;
+}
+.backgroundGray .blueFont{
+    color: #5d7eb1;
+}
+
+/*-*-*-*-*-*-Chat-*-*-*-*-*/
+.chat{
+    margin: 0 auto;
+    overflow: hidden;
+    max-width:420px; 
+    height: auto;
+}
+.chat li{
+    position:relative;
+    display: inline-block;
+    float:left;
+    margin: 10px 15px;
+}
+.chat li .chatTag{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right:0;
+    border-radius: 5px;
+    color:#fff;
+    background-color: #ee2d56;
+}
+.chat li img{
+    border: solid 5px #fff;
+}
+
+/*-*-*-*-*-*-*-Follower requests-*-*-*-*-*-*-*/
+
+.textbox{
+     position: absolute;
+    margin-top: -75px;
+    left: 145px;
+}
+
+.btns{
+    display: inline-block;
+    float: right;
+}
+
+.followList li{
+    margin-bottom: 30px;
+}
+
+/*-*-*-*-*-*-*-Profile-*-*-*-*-*-*-*/
+
+.complete{
+    width:100%;
+}
+
+.complete .edit{
+    float: right;
+    margin-top: 5px;
+}
+
+.circleP{
+    display: inline;
+    border: solid 1px #7c7c7e;
+    border-radius: 50px;
+    padding: 7px 14px;
 }
 
 /*Footer styles*/
@@ -202,4 +369,3 @@ input[type=number]::-webkit-outer-spin-button {
 .terms{
 	width: 100%;
 }
-
