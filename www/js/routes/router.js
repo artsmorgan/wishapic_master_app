@@ -41,5 +41,11 @@ app.config(function($stateProvider, $urlRouterProvider) {
       templateUrl: 'templates/newPassword.html'
   })
 
+    //setup state for new Password
+  .state('camera', {
+      url: '/camera',
+      templateUrl: 'templates/camera.html'
+  })
+
   $urlRouterProvider.otherwise('/home');
 })
