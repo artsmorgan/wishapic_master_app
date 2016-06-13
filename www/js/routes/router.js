@@ -66,7 +66,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
   })
   
   //setup state for Follower requests 
-  .state('FollowerRequest', {
+  .state('followerRequest', {
       url: '/followerRequest',
       templateUrl: 'templates/followerRequest.html'
   })

@@ -1,10 +1,10 @@
-<ion-view view-title="home" class="home" id="home" ng-controller="CameraCtrl">
+<ion-view view-title="home" class="home" id="home" ng-controller="CameraCtrl" ng-init="init()">
 	<ion-content class="padding center" 
-                on-swipe-left="onSwipeLeft()" 
-                on-swipe-right="onSwipeRight()"
-                on-drag-right="onDragRight()">
+                on-drag-right="onDragRight($event)" 
+                on-drag-left="onDragLeft($event)" 
+                on-release="onRelease($event)">
 
-		 <div class="list">
+		 <div class="list" >
         <div class="item">
             Camera
         </div>
