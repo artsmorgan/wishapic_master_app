@@ -372,10 +372,16 @@ ul.circleList li h6{
 }
 
 .circleP{
-    display: inline;
+    text-align: center;
+    /* float: left; */
+    width: 35px;
+    height: 35px;
+    /* display: inline; */
     border: solid 1px #7c7c7e;
-    border-radius: 50px;
-    padding: 7px 14px;
+    border-radius: 50%;
+    /* padding: 7px 14px; */
+    line-height: 35px;
+    margin: 0 auto;
 }
 
 /*Footer styles*/
@@ -386,4 +392,8 @@ ul.circleList li h6{
 }
 .terms{
 	width: 100%;
+}
+
+.bar{
+    background: none !important;
 }

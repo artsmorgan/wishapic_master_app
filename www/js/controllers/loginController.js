@@ -1,4 +1,4 @@
-app.controller('LoginCtrl', function ($scope, CONFIG, $localStorage, User) {	
+app.controller('LoginCtrl', function ($scope, CONFIG, $localStorage, User,$location) {	
 	
 	$scope.model = {};
 	var pageId = CONSTANTS.pageId.login;
@@ -22,7 +22,7 @@ app.controller('LoginCtrl', function ($scope, CONFIG, $localStorage, User) {
                     alert(res.data)    
                 } else {                	
                     $localStorage.token = res.token;
-                    window.location = "/";    
+                    $location.path('/camera');
                 }
             }, function() {
                 $rootScope.error = 'Failed to signin';

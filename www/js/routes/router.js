@@ -66,9 +66,15 @@ app.config(function($stateProvider, $urlRouterProvider) {
   })
   
   //setup state for Follower requests 
-  .state('FollowerRequest', {
+  .state('followerRequest', {
       url: '/followerRequest',
       templateUrl: 'templates/followerRequest.html'
+  })
+
+    //setup state for new Password
+  .state('camera', {
+      url: '/camera',
+      templateUrl: 'templates/camera.html'
   })
 
   $urlRouterProvider.otherwise('/home');

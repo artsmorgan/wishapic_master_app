@@ -6,7 +6,7 @@ var SETTINGS = {};
 var CONSTANTS = {};
 	CONSTANTS.pageId = {
 		home  : 1,
-		login : 2,
+		login : 2
 	}
 
 var Env = function(){
