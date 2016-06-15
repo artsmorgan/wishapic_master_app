@@ -295,22 +295,35 @@ ul.circleList li h6{
 .backgroundGray .blue{
     border: solid 6px #5d7eb1;
 }
+.backgroundGray .transparent{
+    border: 6px solid rgba(255, 255, 255, .5);
+    position: absolute;
+    margin-left: -140px;
+    bottom: 0;
+    margin-bottom: -30px;
+}
+.backgroundGray .transparent + p{
+    position: absolute;
+    bottom: -50px;
+    margin-left: 50px;
+}
+   
 .backgroundGray .blueFont{
     color: #5d7eb1;
 }
 
 /*-*-*-*-*-*-Chat-*-*-*-*-*/
-.chat{
+.chat, .profileList{
     margin: 0 auto;
     overflow: hidden;
     max-width:420px; 
     height: auto;
 }
-.chat li{
+.chat li, .profileList li{
     position:relative;
     display: inline-block;
     float:left;
-    margin: 10px 15px;
+    margin: 30px 15px;
 }
 .chat li .chatTag{
     width: 20px;
@@ -323,6 +336,11 @@ ul.circleList li h6{
 }
 .chat li img{
     border: solid 5px #fff;
+}
+
+
+.profileList .square{
+    border-radius: 0;
 }
 
 /*-*-*-*-*-*-*-Follower requests-*-*-*-*-*-*-*/

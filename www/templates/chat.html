@@ -1,4 +1,4 @@
-<ion-view view-title="chat" class="backgroundGray">
+<ion-view view-title="chat" class="backgroundGray" ng-controller="ChatCtrl">
 	<div class="bar bar-header">
     <div class="list">
       <div class="item">
@@ -6,7 +6,7 @@
       </div>
     </div>
 </div>
-	<ion-content class="padding center">
+	<ion-content class="padding center" data-ng-init="usersAll()">
 		<div class="list">
             <div class="item"></div>
             
@@ -17,11 +17,17 @@
                 </label>
             </div>
                 <div class="item">
-                    <ul class="chat">
-                        <li><div class="chatTag">#</div>
+                    <ul class="chat" >
+                        <li ng-repeat="user in usersList">
+                            {{user.id}}
+                            {{user.name}}
+                            {{user.email}}
+                            {{user.picture}}
+                        </li>
+                        <!--<li><div class="chatTag">#</div>
                             <img class="title-image" src="img/profile.jpg" width="100px" /></li>
                         <li><div class="chatTag">#</div><img class="title-image" src="img/profile.jpg" width="100px" /></li>
-                        <li><img class="title-image" src="img/profile.jpg" width="100px" /></li>
+                        <li><img class="title-image" src="img/profile.jpg" width="100px" /></li>-->
                     </ul>
             </div>
                 <div class="item"></div>
