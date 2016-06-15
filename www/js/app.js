@@ -6,7 +6,8 @@
 var app = angular.module('starter', [
     'ionic',
     'ngStorage',
-    'angular-loading-bar'
+    'angular-loading-bar',
+    'angularMoment'
     ]);
 
 app.run(function($ionicPlatform,$rootScope) {

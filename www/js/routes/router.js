@@ -77,5 +77,11 @@ app.config(function($stateProvider, $urlRouterProvider) {
       templateUrl: 'templates/camera.html'
   })
 
+    //setup state for new Password
+  .state('chatRoom', {
+      url: '/chatRoom/:userId',
+      templateUrl: 'templates/chat-room.html'
+  })
+
   $urlRouterProvider.otherwise('/home');
 })
