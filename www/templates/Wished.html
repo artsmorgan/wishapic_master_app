@@ -1,0 +1,49 @@
+<ion-view view-title="Wished" class="backgroundGray" ng-controller="WishedCtrl">
+	<div class="bar bar-header">
+    <div class="list">
+      <div class="item">
+        <a class="arrow" href=""><i class="ion-ios-arrow-thin-left"></i></a>
+      </div>
+    </div>
+</div>
+	<ion-content class="padding" data-ng-init="usersAll()">
+		<div class="list">
+            <div class="item"></div>
+            <div class="item center">
+                <h1 class="greenFont">Wished</h1>
+            </div>
+            <div class="item uppercase">
+                <ul class="mobileList">
+                    <li class="item">
+                        <img class="title-image green" src="img/profile.jpg" width="110px" />
+                        <div class="textbox">
+                            <p>Emilia Clarke</p>
+                            <h6>Chicago, USA</h6>
+                        </div>  
+                    </li>
+                    <li class="item">
+                        <img class="title-image green" src="img/profile.jpg" width="110px" />
+                        <div class="textbox">
+                            <p>Emilia Clarke</p>
+                            <h6>Chicago, USA</h6>
+                        </div>  
+                    </li>
+                    <li class="item" ng-repeat="user in usersList">
+                            {{user.id}}
+                            {{user.name}}
+                            {{user.email}}
+                            {{user.picture}}
+                    </li>
+                    
+                </ul>
+                
+            </div>
+                <div class="item"></div>
+                
+            <div class="item">
+                
+            </div>
+            <div class="item"></div>
+		</div>
+	</ion-content>
+</ion-view>

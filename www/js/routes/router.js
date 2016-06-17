@@ -76,6 +76,18 @@ app.config(function($stateProvider, $urlRouterProvider) {
       url: '/camera',
       templateUrl: 'templates/camera.html'
   })
+  
+   //setup state for Wished
+  .state('wished', {
+      url: '/wished',
+      templateUrl: 'templates/Wished.html'
+  })
+  
+  //setup state for Granted
+  .state('granted', {
+      url: '/granted',
+      templateUrl: 'templates/Granted.html'
+  })
 
   $urlRouterProvider.otherwise('/home');
 })

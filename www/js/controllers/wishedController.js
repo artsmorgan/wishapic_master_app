@@ -1,4 +1,4 @@
-app.controller('ChatCtrl', function ($scope, $http) {
+app.controller('WishedCtrl', function ($scope, $http) {
 	 $scope.usersList =[];
 	$scope.usersAll = function () {
             $http.get('test.json').then(function(info) { 
@@ -10,4 +10,3 @@ app.controller('ChatCtrl', function ($scope, $http) {
           });
      };
 })
-
