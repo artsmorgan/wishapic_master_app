@@ -1,4 +1,4 @@
-app.controller('CameraCtrl', function ($scope, CONFIG,$location) {
+app.controller('CameraCtrl', function ($scope, CONFIG, $location) {
 	
 	var pageId = CONSTANTS.pageId.home;
 
