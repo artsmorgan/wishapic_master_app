@@ -88,6 +88,12 @@ app.config(function($stateProvider, $urlRouterProvider) {
       url: '/granted',
       templateUrl: 'templates/Granted.html'
   })
+  
+  //setup state for profilePic
+  .state('profilePic', {
+      url: '/profilePic',
+      templateUrl: 'templates/profilePic.html'
+  })
 
   $urlRouterProvider.otherwise('/home');
 })

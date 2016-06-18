@@ -350,9 +350,8 @@ ul.circleList li h6{
     border: solid 5px #fff;
 }
 
-
-.profileList .square{
-    border-radius: 0;
+ .square{
+    border-radius: 0!important;
 }
 
 .mobileList{
@@ -360,6 +359,19 @@ ul.circleList li h6{
     overflow: hidden;
     max-width:300px; 
     height: auto;
+}
+
+.picList li img{
+    width: 50%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    float:left;
+}
+
+.picList li .first{
+    width:100%;
+     display: block;
 }
 
 /*-*-*-*-*-*-*-Follower requests-*-*-*-*-*-*-*/
@@ -401,6 +413,17 @@ ul.circleList li h6{
     /* padding: 7px 14px; */
     line-height: 35px;
     margin: 0 auto;
+}
+
+.circlePink{
+    border-color: #ee2d56;
+}
+.circlePink i{
+    color: #ee2d56!important;
+}
+.circleP i{
+    padding:0;
+    font-size: 22px;
 }
 
 /*Footer styles*/
