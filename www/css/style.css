@@ -295,6 +295,10 @@ ul.circleList li h6{
 .backgroundGray .blue{
     border: solid 6px #5d7eb1;
 }
+
+.backgroundGray .pinky{
+    border: solid 6px #ec7577;
+}
 .backgroundGray .transparent{
     border: 6px solid rgba(255, 255, 255, .5);
     position: absolute;
@@ -310,6 +314,14 @@ ul.circleList li h6{
    
 .backgroundGray .blueFont{
     color: #5d7eb1;
+}
+
+.backgroundGray .pinkFont{
+    color: #e2466d;
+}
+
+.backgroundGray .greenFont{
+    color: #8dc2a6;
 }
 
 /*-*-*-*-*-*-Chat-*-*-*-*-*/
@@ -341,6 +353,13 @@ ul.circleList li h6{
 
 .profileList .square{
     border-radius: 0;
+}
+
+.mobileList{
+    margin: 0 auto;
+    overflow: hidden;
+    max-width:300px; 
+    height: auto;
 }
 
 /*-*-*-*-*-*-*-Follower requests-*-*-*-*-*-*-*/
