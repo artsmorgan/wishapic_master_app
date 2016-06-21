@@ -12,13 +12,13 @@ app.config(function($stateProvider, $urlRouterProvider) {
       templateUrl: 'templates/home.html'
   })
 
- //setup state for login 
+ //setup state for login
   .state('login', {
       url: '/login',
       templateUrl: 'templates/login.html'
   })
 
- //setup state for Get Started 
+ //setup state for Get Started
   .state('getStarted', {
       url: '/getStarted',
       templateUrl: 'templates/getStarted.html'
@@ -40,32 +40,32 @@ app.config(function($stateProvider, $urlRouterProvider) {
       url: '/newPassword',
       templateUrl: 'templates/newPassword.html'
   })
-  
+
    //setup state for Profile
   .state('profile', {
       url: '/profile',
       templateUrl: 'templates/profile.html'
   })
-  
+
     //setup state for Edit Profile
   .state('editProfile', {
       url: '/editProfile',
       templateUrl: 'templates/editProfile.html'
   })
-  
+
   //setup state for Chat
   .state('chat', {
       url: '/chat',
       templateUrl: 'templates/chat.html'
   })
-  
+
   //setup state for Ask for a Picture screen
   .state('askPic', {
       url: '/askPic',
       templateUrl: 'templates/askPic.html'
   })
-  
-  //setup state for Follower requests 
+
+  //setup state for Follower requests
   .state('followerRequest', {
       url: '/followerRequest',
       templateUrl: 'templates/followerRequest.html'
@@ -76,23 +76,29 @@ app.config(function($stateProvider, $urlRouterProvider) {
       url: '/camera',
       templateUrl: 'templates/camera.html'
   })
-  
+
    //setup state for Wished
   .state('wished', {
       url: '/wished',
       templateUrl: 'templates/Wished.html'
   })
-  
+
   //setup state for Granted
   .state('granted', {
       url: '/granted',
       templateUrl: 'templates/Granted.html'
   })
-  
+
   //setup state for profilePic
   .state('profilePic', {
       url: '/profilePic',
       templateUrl: 'templates/profilePic.html'
+  })
+
+  //setup state for happeningNow
+  .state('happeningNow', {
+      url: '/happeningNow',
+      templateUrl: 'templates/happeningNow.html'
   })
 
   $urlRouterProvider.otherwise('/home');
