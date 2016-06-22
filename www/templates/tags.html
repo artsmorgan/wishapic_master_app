@@ -1,0 +1,13 @@
+<ion-view view-title="tags" class="backgroundGray" ng-controller="tagsCtrl"
+                                                    on-drag-right="onDragRight($event)"
+                                                    on-drag-left="onDragLeft($event)"
+                                                    on-release="onRelease($event)">
+  <ion-content class="padding">
+    <a class="ion-ios-arrow-thin-left buttonBack buttonBack_gray"></a>
+    <h2 class="title_gray center">Happening Now<br>&nbsp; </h2>
+    <input type="text" placeholder="Search" class="input_search" ng-model="searchText"/>
+    <div class="tagsContainer_flex">
+      <span class="tag_outline" ng-repeat="tag in tags | filter:searchText">{{tag}}</span>
+    </div>
+  </ion-content>
+</ion-view>

@@ -117,6 +117,10 @@ app.config(function($stateProvider, $urlRouterProvider) {
       url: '/locations',
       templateUrl: 'templates/locations.html'
   })
-
+  //setup state for locations
+  .state('tags', {
+      url: '/tags',
+      templateUrl: 'templates/tags.html'
+  })
   $urlRouterProvider.otherwise('/home');
 })

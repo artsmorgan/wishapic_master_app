@@ -118,8 +118,9 @@
 }
 
 .tagsContainer {
-  padding: 0 8px;
+  padding-left: 8px;
   margin-top: auto;
+  margin-right: -4px;
 }
 
 .tag {
@@ -127,10 +128,6 @@
   font-size: 16px;
   display: inline-block;
   margin: 0 5px 4px 0;
-}
-
-.tag:last-child{
-  margin-right: 0;
 }
 
 .tag_pink {
@@ -191,6 +188,22 @@ img.location__picture{
 
 .buttonBack_gray {
   color: #a7abae;
+}
+
+.tagsContainer_flex {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -10px;
+  padding-top: 22px;
+}
+
+.tag_outline{
+  border: 1px solid #575757;
+  border-radius: 10px;
+  font-size: 20px;
+  color: #575757;
+  padding: 4px 10px;
+  margin: 14px 16px 0 0;
 }
 
 @media only screen and (min-width: 350px) {
