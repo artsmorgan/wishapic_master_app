@@ -108,7 +108,7 @@ h5 { font-size: 12px!important;}
 h6 { font-size: 10px!important;}
 
 /*-*-*-*-*-Placeholder styles-*-*-*-*-*-*/
-::-webkit-input-placeholder {
+.form ::-webkit-input-placeholder { 
    color: #fff!important;
 }
 
@@ -180,7 +180,7 @@ h6 { font-size: 10px!important;}
 .item label{
 	border-bottom: solid 1px #989da2;
 }
-.item input[type="text"], .item input[type="password"], .item input[type="number"]{
+.form .item input[type="text"], .item input[type="password"], .item input[type="number"]{
 	color: #fff;
 }
 
@@ -426,7 +426,63 @@ ul.circleList li h6{
     font-size: 22px;
 }
 
-/*Footer styles*/
+/*-*-*-*-*-*-*-*- Picture screen-*-*-*-*-*-*-*-*/
+
+.bottomItem{
+     /*pending*/
+}
+.buttons{
+    display: inline-block;
+    overflow: hidden;
+    background-color: #f09592;
+    width: 60px;
+    height: 60px;
+    padding: 10px 8px 2px;
+    margin-right: 10px;
+    border-radius: 50px;
+    text-decoration: none;
+    
+}
+
+.btn-red{
+    background-color: rgba(216, 93, 113,.8);
+}
+.btn-blue{
+    background-color: rgba(113, 129, 188,.8);
+}
+.btn-green{
+    background-color: rgba(148, 202, 168,.7);  /*#94caa8*/
+}
+
+.btn-pink{
+    background-color: rgba(243, 30, 86,.9);  /*#f31e56*/
+}
+
+.buttons i{
+    padding-right: 0;
+    font-size: 37px;
+}
+
+.infoBox{
+    background-color: rgba(255,255,255,.5);
+    border-radius: 5px;
+}
+
+.infoBox .item-input{
+    border-bottom: none;
+    border-top: 1px solid #c3c3c3;
+}
+
+.infoBox i{
+    font-size: 37px;
+    color: #ee2d56;
+}
+.infoBox p{
+    color: #aaa;
+    text-align: center;
+}
+
+/*-*-*-*-*-*-*-*-*-Footer styles-*-*-*-*-*-*-*--*/
 
 .bar-footer {
 	height: 90px;

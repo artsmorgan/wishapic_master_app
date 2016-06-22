@@ -1,0 +1,44 @@
+<ion-view view-title="addPic" class="addPic" id="addPic" ng-controller="addPicCtrl">
+	<ion-content class="padding center">
+        <div class="list">
+            <div class="item" ></div>
+            <div class="item" >
+                <div class="item infoBox" ng-show="showLocation">
+                    <i class="ion-ios-location-outline"></i>
+                     <label class="item-input">
+                    <input type="text" placeholder="Add your location" name="location" id="location" ng-model="model.location">
+                </label>
+                
+                </div>
+            <div class="item infoBox" ng-show="showWords">
+                <i class="ion-pound"></i>
+                     <label class="item-input">
+                    <input type="text" placeholder="Add your key words..." name="keywords" id="keywords" ng-model="model.keywords">
+                </label>
+                <label class="item-input">
+                    <input type="text" placeholder="Add a comment..." name="comment" id="comment" ng-model="model.comment">
+                </label>
+                </div>
+            <div class="item infoBox" ng-show="showTime">
+                <i class="ion-ios-clock-outline"></i>
+                <p class="item-input">Timer...</p>
+                <div>
+                    <a class="buttons btn-red" href="" >45 sec</a>
+                <a class="buttons btn-blue" href="">2 min</a>
+                <a class="buttons btn-green" href="">+</a>
+                </div>
+            </div>
+            
+            <div class="item bottomItem"  ng-show="showDiv">
+                <a class="buttons btn-red" href="" ng-click="showLocation=!showLocation;"><i class="ion-ios-location-outline" ng-hide="showLocation"></i></a>
+                <a class="buttons btn-blue" href="" ng-click="showWords=!showWords;"><i class="ion-pound" ng-hide="showWords"></i></a>
+                <a class="buttons btn-green" href="" ng-click="showTime=!showTime;"><i class="ion-ios-clock-outline" ng-hide="showTime"></i></a>
+                <a class="buttons btn-pink" href=""><p>Go Live</p></a>
+            </div>
+            <div class="item bottomItem" ng-hide="hideButton">
+                <a class="buttons" href="" ng-click="showDiv=true; hideButton=true;" ></a>
+                <p>What is happening now?</p>
+            </div>
+        </div>
+   	</ion-content>
+</ion-view>
