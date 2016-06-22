@@ -1,0 +1,20 @@
+<ion-view view-title="locations" class="backgroundGray" ng-controller="locationsCtrl"
+                                                    on-drag-right="onDragRight($event)"
+                                                    on-drag-left="onDragLeft($event)"
+                                                    on-release="onRelease($event)">
+  <ion-content class="padding">
+    <a class="ion-android-arrow-back buttonBack buttonBack_gray"></a>
+    <h2 class="title_gray center">{{totalCountries}} Countries & {{totalCities}} Cities<br>Happening Now</h2>
+    <input type="text" placeholder="Search" class="input_search" ng-model="searchText"/>
+    <div class="locationsContainer">
+      <div class="location" ng-repeat="location in locations | filter:searchText">
+        <img class="location__picture" src="img/Transparent.png" ng-style="{'background-image': 'url({{location.urlPicture}})'}">
+        <span class="location__name">{{location.name}}</span>
+      </div>
+      <div class="location">
+        <img class="location__picture" src="img/Transparent.png" style="background-image: url(img/circle_pink_add.png)">
+        <span class="location__name">Activate your city</span>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
