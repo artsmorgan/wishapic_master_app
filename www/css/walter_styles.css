@@ -178,9 +178,15 @@ img.location__picture{
 
 .buttonBack {
   position: absolute;
-  font-size: 52px;
-  padding: 2px 12px;
-  top: 30px;
+  font-size: 80px;
+  padding: 0px 12px;
+  top: 24px;
+}
+
+.buttonBack::before{
+  width: 28px;
+  overflow: hidden;
+  line-height: 60px;
 }
 
 .buttonBack_gray {
