@@ -439,3 +439,16 @@ ul.circleList li h6{
 .bar{
     background: none !important;
 }
+
+#camera .scroll{
+    position: absolute;
+    padding: 10px 0 !important;
+    width: 100%;
+    height: 100%;
+}
+
+#camera .scroll .footer-camera{
+    position: fixed;
+    bottom: 5%;
+    width: 90%;
+}

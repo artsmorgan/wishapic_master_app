@@ -90,11 +90,11 @@ app.config(function($stateProvider, $urlRouterProvider) {
   })
 
 
-    //setup state for new Password
+  //setup state for new Password
   .state('chatRoom', {
       url: '/chatRoom/:userId',
       templateUrl: 'templates/chat-room.html'
-
+  })
   //setup state for profilePic
   .state('profilePic', {
       url: '/profilePic',

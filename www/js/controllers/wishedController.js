@@ -1,12 +1,9 @@
-app.controller('WishedCtrl', function ($scope, $http) {
+app.controller('WishedCtrl', function ($scope, $http,getWishedById) {
 	 $scope.usersList =[];
-	$scope.usersAll = function () {
-            $http.get('test.json').then(function(info) { 
-            console.log(info.data);
-            $scope.usersList = info.data;
-          },
-          function(errorChat) {
-              console.log('data error');
-          });
-     };
+   var userId = 1;
+
+	 getWishedById.all(userId).success(function (response) { 
+      console.log(response);
+      $scope.usersList = response[0].wishers;
+   });
 })

@@ -2,7 +2,7 @@
 	<div class="bar bar-header">
     <div class="list">
       <div class="item">
-        <a class="arrow" href=""><i class="ion-ios-arrow-thin-left"></i></a>
+        <a class="arrow" href="#/happeningNow"><i class="ion-ios-arrow-thin-left"></i></a>
       </div>
     </div>
 </div>
@@ -14,36 +14,15 @@
             </div>
             <div class="item uppercase">
                 <ul class="mobileList">
-                    <li class="item">
-                        <img class="title-image green" src="img/profile.jpg" width="110px" />
-                        <div class="textbox">
-                            <p>Emilia Clarke</p>
-                            <h6>Chicago, USA</h6>
-                        </div>  
-                    </li>
-                    <li class="item">
-                        <img class="title-image green" src="img/profile.jpg" width="110px" />
-                        <div class="textbox">
-                            <p>Emilia Clarke</p>
-                            <h6>Chicago, USA</h6>
-                        </div>  
-                    </li>
                     <li class="item" ng-repeat="user in usersList">
-                            {{user.id}}
-                            {{user.name}}
-                            {{user.email}}
-                            {{user.picture}}
-                    </li>
-                    
-                </ul>
-                
-            </div>
-                <div class="item"></div>
-                
-            <div class="item">
-                
-            </div>
-            <div class="item"></div>
+                        <img class="title-image green" src="{{user.wishedPicture}}" width="110px" />
+                        <div class="textbox">
+                            <p>{{user.wishedName}}</p>
+                            <h6>{{user.wishedLocation}}</h6>
+                        </div>  
+                    </li>                                       
+                </ul>                
+            </div>            
 		</div>
 	</ion-content>
 </ion-view>

@@ -1,12 +1,13 @@
-<ion-view view-title="home" class="home" id="home" ng-controller="CameraCtrl" ng-init="init()">
-	<ion-content class="padding center" 
-                on-drag-right="onDragRight($event)" 
-                on-drag-left="onDragLeft($event)" 
-                on-release="onRelease($event)">
+<ion-view view-title="home" class="camera" id="camera" ng-controller="CameraCtrl" ng-init="init()">
+	<ion-content class="padding center" >
 
-		 <div class="list" >
-        <div class="item">
-            Camera
-        </div>
-    </div>          
+		<div class="list" >
+	        <div class="item">
+	            Camera
+	        </div>	        
+	    </div>    
+		<div class="footer-camera">
+        	<a class="button icon button_bg_world" on-touch="takePicture($event)" on-release="releaseTakePicture($event)"></a>
+        </div>		      
+	</ion-content>
 </ion-view>

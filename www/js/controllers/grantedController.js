@@ -1,12 +1,8 @@
-app.controller('GrantedCtrl', function ($scope, $http) {
+app.controller('GrantedCtrl', function ($scope, $http,getGrantedById) {
 	 $scope.usersList =[];
-	$scope.usersAll = function () {
-            $http.get('test.json').then(function(info) { 
-            console.log(info.data);
-            $scope.usersList = info.data;
-          },
-          function(errorChat) {
-              console.log('data error');
-          });
-     };
+   var userId = 1;
+	getGrantedById.all(userId).success(function (response) { 
+      console.log(response);
+      $scope.usersList = response[0].granteds;
+   });
 })

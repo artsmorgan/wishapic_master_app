@@ -1,45 +1,35 @@
-<ion-view view-title="happening now" ng-controller="happeningNowCtrl">
+<ion-view view-title="happening now" ng-controller="happeningNowCtrl"
+                                                    on-drag-right="onDragRight($event)" 
+                                                    on-drag-left="onDragLeft($event)" 
+                                                    on-release="onRelease($event)">
   <ul class="actionButtons">
-    <li><a class="actionButton actionButton_green">2</a></li>
-    <li><a class="actionButton actionButton_red">3</a></li>
-    <li><a class="actionButton actionButton_blue">2</a></li>
-    <li><a class="actionButton actionButton_yellow"></a></li>
+    <li><a class="actionButton actionButton_green" id="wished_btn" on-touch="onTouch($event)">{{wished}}</a></li>
+    <li><a class="actionButton actionButton_red" id="granted_btn" on-touch="onTouch($event)">{{granted}}</a></li>
+    <li><a class="actionButton actionButton_blue" id="chat_btn" on-touch="onTouch($event)">{{chat}}</a></li>
+    <li><a class="actionButton actionButton_yellow" id="camera_btn" on-touch="onTouch($event)"></a></li>
   </ul>
   <ion-content class="padding">
-    <h2 class="title_button title_gray center"><span>Happening Now</span><span class="buttonContainer"><a class="button icon button_bg_world"></span></a></h2>
+    <h2 class="title_button title_gray center">
+      <span>Happening Now</span>
+        <span class="buttonContainer">
+        <a class="button icon button_bg_world"></a>
+        </span></h2>
     <div class="profileCardsContainer">
-      <div class="profileCard">
+
+      <div class="profileCard" ng-repeat="card in cards">
         <div class="profileCard__content">
-          <img class="profileCard__picture" src="img/Transparent.png" style="background-image: url(img/Testprofile.jpg)" />
-          <div class="profileCard__userPhoto"><img src="img/profile.jpg" /></div>
-          <p class="profileCard__userName">Ammanda Roberts</p>
-          <p class="profileCard__comment">Lorem ipsum dolor sit amet, has purto dolore noster eu. Ex eligendi offendit vis, ne vel consul delicata volutpat.</p>
+          <img class="profileCard__picture" src="img/Transparent.png" 
+                  ng-style="{'background-image':'url({{card.urlPicture}})'}" />
+          <div class="profileCard__userPhoto"><img src=" {{card.profilePicture}} " /></div>
+          <p class="profileCard__userName">{{card.username}}</p>
+          <p class="profileCard__comment">{{card.description}}</p>
           <div class="tagsContainer">
-            <span class="tag tag_pink">test</span><span class="tag tag_pink">hey</span><span class="tag tag_pink">wat world</span>
+            <span class="tag tag_pink" ng-repeat="tag in card.tags">{{tag}}</span>
           </div>
         </div>
       </div>
-      <div class="profileCard">
-        <div class="profileCard__content">
-          <img class="profileCard__picture" src="img/Transparent.png" style="background-image: url(img/Testprofile.jpg)" />
-          <div class="profileCard__userPhoto"><img src="img/profile.jpg" /></div>
-          <p class="profileCard__userName">Ammanda Roberts</p>
-          <p class="profileCard__comment">Lorem ipsum dolor sit amet, has purto dolore noster eu.</p>
-          <div class="tagsContainer">
-            <span class="tag tag_pink">test</span><span class="tag tag_pink">hey</span><span class="tag tag_pink">wat world</span>
-          </div>
-        </div>
-      </div>
-      <div class="profileCard">
-        <div class="profileCard__content">
-          <img class="profileCard__picture" src="img/Transparent.png" style="background-image: url(img/Testprofile.jpg)" />
-          <div class="profileCard__userPhoto"><img src="img/profile.jpg" /></div>
-          <p class="profileCard__userName">Ammanda Roberts</p>
-          <p class="profileCard__comment">Lorem ipsum dolor sit amet, has purto dolore noster eu.</p>
-          <div class="tagsContainer">
-            <span class="tag tag_pink">test</span><span class="tag tag_pink">hey</span><span class="tag tag_pink">wat world</span>
-          </div>
-        </div>
-      </div>
+
+    </div>  
+      
   </ion-content>
 </ion-view>
