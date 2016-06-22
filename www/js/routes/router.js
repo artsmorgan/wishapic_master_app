@@ -100,12 +100,19 @@ app.config(function($stateProvider, $urlRouterProvider) {
       url: '/profilePic',
       templateUrl: 'templates/profilePic.html'
   })
+    //setup state for AddPic
+  .state('addPic', {
+      url: '/addPic',
+      templateUrl: 'templates/AddPic.html'
+  })
 
   //setup state for happeningNow
   .state('happeningNow', {
       url: '/happeningNow',
       templateUrl: 'templates/happeningNow.html'
   })
+
+  
 
   $urlRouterProvider.otherwise('/home');
 })
