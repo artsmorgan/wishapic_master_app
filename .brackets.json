@@ -2,6 +2,9 @@
     "jscodehints.detectedExclusions": [
         "C:/Users/Steph/Documents/GitHub/wishapic/platforms/ios/cordova/loggingHelper.js",
         "C:/Users/Steph/Documents/GitHub/wishapic/platforms/ios/cordova/lib/plugman/pluginHandlers.js",
-        "C:/Users/Steph/Documents/GitHub/wishapic/platforms/ios/www/cordova-js-src/platform.js"
+        "C:/Users/Steph/Documents/GitHub/wishapic/platforms/ios/www/cordova-js-src/platform.js",
+        "C:/Users/Steph/Documents/GitHub/wishapic/platforms/ios/cordova/lib/projectFile.js",
+        "C:/Users/Steph/Documents/GitHub/wishapic/www/js/controllers/homeController.js",
+        "C:/Users/Steph/Documents/GitHub/wishapic/platforms/ios/cordova/lib/versions.js"
     ]
 }

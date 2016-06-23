@@ -111,8 +111,11 @@ app.config(function($stateProvider, $urlRouterProvider) {
       url: '/happeningNow',
       templateUrl: 'templates/happeningNow.html'
   })
-
-  
+  //setup state for locations
+  .state('locations', {
+      url: '/locations',
+      templateUrl: 'templates/locations.html'
+  })
 
   $urlRouterProvider.otherwise('/home');
 })

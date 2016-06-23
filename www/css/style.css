@@ -108,7 +108,7 @@ h5 { font-size: 12px!important;}
 h6 { font-size: 10px!important;}
 
 /*-*-*-*-*-Placeholder styles-*-*-*-*-*-*/
-::-webkit-input-placeholder {
+.form ::-webkit-input-placeholder { 
    color: #fff!important;
 }
 
@@ -180,7 +180,7 @@ h6 { font-size: 10px!important;}
 .item label{
 	border-bottom: solid 1px #989da2;
 }
-.item input[type="text"], .item input[type="password"], .item input[type="number"]{
+.form .item input[type="text"], .item input[type="password"], .item input[type="number"]{
 	color: #fff;
 }
 
@@ -426,7 +426,107 @@ ul.circleList li h6{
     font-size: 22px;
 }
 
-/*Footer styles*/
+/*-*-*-*-*-*-*-*- Picture screen-*-*-*-*-*-*-*-*/
+
+.bottomItem{
+     /*pending*/
+}
+.buttons{
+    display: inline-block;
+    overflow: hidden;
+    background-color: #f09592;
+    width: 60px;
+    height: 60px;
+    padding: 10px 8px 2px;
+    margin-right: 10px;
+    border-radius: 50px;
+    text-decoration: none;
+    
+}
+
+.btn-red{
+    background-color: rgba(216, 93, 113,.8);
+}
+.btn-blue{
+    background-color: rgba(113, 129, 188,.8);
+}
+.btn-green{
+    background-color: rgba(148, 202, 168,.7);  /*#94caa8*/
+}
+
+.btn-pink{
+    background-color: rgba(243, 30, 86,.9);  /*#f31e56*/
+}
+
+.buttons i{
+    padding-right: 0;
+    font-size: 37px;
+}
+
+.infoBox{
+    background-color: rgba(255,255,255,.5);
+    border-radius: 5px;
+    overflow: visible;
+}
+
+.infoBox .item-input{
+    border-bottom: none;
+    border-top: 1px solid #c3c3c3;
+}
+
+.infoBox i{
+    font-size: 37px;
+    color: #ee2d56;
+}
+.infoBox p{
+    color: #aaa;
+    text-align: center;
+}
+
+#tags-bubble{
+    /*display: none;*/
+}
+
+.hide{
+    display: none;
+}
+
+.show{
+    display: inline-block;
+}
+
+
+.infoBox:after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 15px 15px 0;
+    border-color: rgba(255,255,255,.5) transparent;
+    display: block;
+    width: 0;
+    z-index: 1;
+    bottom: -16px;
+    left: 26px;
+}
+#tags-bubble.infoBox:after{
+    left: 115px;
+}
+#timmer-bubble.infoBox:after{
+    left: 188px;
+}
+#timmer-bubble a.buttons{
+    line-height: 40px;
+}
+
+.no-icon{
+    text-indent: -9999px;
+}
+
+.show-icon{
+    text-indent: 0px;
+}
+
+/*-*-*-*-*-*-*-*-*-Footer styles-*-*-*-*-*-*-*--*/
 
 .bar-footer {
 	height: 90px;
@@ -440,15 +540,34 @@ ul.circleList li h6{
     background: none !important;
 }
 
+#addPic .scroll,
 #camera .scroll{
     position: absolute;
     padding: 10px 0 !important;
     width: 100%;
     height: 100%;
 }
-
+#addPic .scroll .footer-camera,
 #camera .scroll .footer-camera{
     position: fixed;
     bottom: 5%;
     width: 90%;
 }
+
+#addPic .scroll .footer-camera .disabled-link{
+    background: rgba(144, 142, 142, 0.63) !important;
+    color:#fff;
+}
+#addPic .scroll .footer-camera .bottomItem .buttons{
+    margin-right: 20px;
+}
+#addPic .scroll .footer-camera .btn-pink p,
+#addPic .scroll .footer-camera .disabled-link p{
+ color:#fff;   
+}
+
+#addPic .scroll .footer-camera .selected-btn{
+    border: 1px solid #fff;
+}
+
+

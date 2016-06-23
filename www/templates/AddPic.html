@@ -1,0 +1,53 @@
+<ion-view view-title="addPic" class="addPic" id="addPic" ng-controller="addPicCtrl">
+	<ion-content class="padding center">        
+        <div class="footer-camera">            
+            
+            <div class="item" id="location-bubble" ng-show="showLocation">
+                <div class="item infoBox">
+                    <i class="ion-ios-location-outline"></i>
+                     <label class="item-input">
+                    <input type="text" placeholder="Add your location" name="location" id="locationInput" 
+                                                                                    ng-model="model.location"
+                                                                                    ng-keyup="checkLocation($event)"/>
+                </label>                
+                </div>
+            </div>    
+
+            <div class="item infoBox" id="tags-bubble" ng-show="showTags">
+                <i class="ion-pound"></i>
+                     <label class="item-input">
+                    <input type="text" placeholder="Add your key words..." name="keywords" id="keywords" 
+                                                                                    ng-model="model.keywords"
+                                                                                    ng-keyup="checkTags($event)"/>
+                </label>
+                <label class="item-input">
+                    <input type="text" placeholder="Add a comment..." name="comment" id="comment" ng-model="model.comment">
+                </label>
+            </div>
+
+            <div class="item infoBox" id="timmer-bubble" ng-show="showTimer">
+                <i class="ion-ios-clock-outline"></i>
+                <p class="item-input">Timer...</p>
+                <div>
+                    <a class="buttons btn-red" id="addTime-1" href="#" on-touch="addTime($event)">45 sec</a>
+                    <a class="buttons btn-blue" id="addTime-2" href="#" on-touch="addTime($event)">2 min</a>
+                    <a class="buttons btn-green" href="#">+</a>
+                </div>
+            </div>
+            
+            <div class="item bottomItem">
+                <a class="buttons btn-red" href="#" on-touch="addLocationAction($event)">
+                    <i class="ion-ios-location-outline" ng-hide="showLocation"></i>
+                </a>
+                <a class="buttons btn-blue disabled-link" id="addTags" href="#" on-touch="addTagsAction($event)">
+                    <i class="ion-pound" ng-hide="showTags"></i>
+                </a>
+                <a class="buttons btn-green disabled-link" id="addTime" href="#" on-touch="addTimmerAction($event)">
+                    <i class="ion-ios-clock-outline" ng-hide="showTimer"></i>
+                </a>
+                <a class="buttons btn-pink disabled-link" id="goLive" href="#" on-touch="goLiveAction($event)"><p>Go Live</p></a>
+            </div>
+            
+        </div>
+   	</ion-content>
+</ion-view>

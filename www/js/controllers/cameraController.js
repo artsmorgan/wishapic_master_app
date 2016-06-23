@@ -63,6 +63,7 @@ app.controller('CameraCtrl', function ($scope, CONFIG, $location) {
 		startHoldTime = 0; 	// reset after each release
 		howLongHoldTime = 0;	// reset after each release
 		timePassed = null;
+		$location.path('addPic');
 	};
 
 	

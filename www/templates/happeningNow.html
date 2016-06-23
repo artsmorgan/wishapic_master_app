@@ -1,6 +1,6 @@
 <ion-view view-title="happening now" ng-controller="happeningNowCtrl"
-                                                    on-drag-right="onDragRight($event)" 
-                                                    on-drag-left="onDragLeft($event)" 
+                                                    on-drag-right="onDragRight($event)"
+                                                    on-drag-left="onDragLeft($event)"
                                                     on-release="onRelease($event)">
   <ul class="actionButtons">
     <li><a class="actionButton actionButton_green" id="wished_btn" on-touch="onTouch($event)">{{wished}}</a></li>
@@ -18,7 +18,7 @@
 
       <div class="profileCard" ng-repeat="card in cards">
         <div class="profileCard__content">
-          <img class="profileCard__picture" src="img/Transparent.png" 
+          <img class="profileCard__picture" src="img/Transparent.png"
                   ng-style="{'background-image':'url({{card.urlPicture}})'}" />
           <div class="profileCard__userPhoto"><img src=" {{card.profilePicture}} " /></div>
           <p class="profileCard__userName">{{card.username}}</p>
@@ -28,8 +28,6 @@
           </div>
         </div>
       </div>
-
-    </div>  
-      
+    </div>
   </ion-content>
 </ion-view>
