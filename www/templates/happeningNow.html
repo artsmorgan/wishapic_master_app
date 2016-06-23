@@ -18,8 +18,10 @@
 
       <div class="profileCard" ng-repeat="card in cards">
         <div class="profileCard__content">
-          <img class="profileCard__picture" src="img/Transparent.png"
+          <div class="profileCard__picturePlaceholder">
+            <img class="profileCard__picture" src="img/Transparent.png"
                   ng-style="{'background-image':'url({{card.urlPicture}})'}" />
+          </div>
           <div class="profileCard__userPhoto"><img src=" {{card.profilePicture}} " /></div>
           <p class="profileCard__userName">{{card.username}}</p>
           <p class="profileCard__comment">{{card.description}}</p>

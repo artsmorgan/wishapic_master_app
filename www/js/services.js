@@ -37,3 +37,11 @@ app.factory('getLocations', function ($http, $rootScope, $stateParams) {
     }
   };
 });
+
+app.factory('getTags', function ($http, $rootScope, $stateParams) {
+  return {
+    all: function () {
+      return $http.get(Env()+'/tags')
+    }
+  };
+});
