@@ -65,7 +65,7 @@
 
 .profileCard {
   width: 50%;
-  padding: 2.5%;
+  padding: 8px;
   display: flex;
 }
 
@@ -137,11 +137,12 @@
   line-height: 18px;
 }
 
-.input_search {
+input[type="text"].input_search {
   margin: 0 auto;
   width: 72%;
   max-width: 340px;
   text-align: center;
+  font-size: 16px;
 }
 
 .locationsContainer{
@@ -153,7 +154,7 @@
 .location {
   text-align: center;
   width: 33.3333%;
-  padding: 1.2% 2.5%;
+  padding: 4px 8px;
 }
 
 img.location__picture{
@@ -191,8 +192,6 @@ img.location__picture{
 }
 
 .tagsContainer_flex {
-  display: flex;
-  flex-wrap: wrap;
   margin-right: -10px;
   padding-top: 22px;
 }
@@ -204,6 +203,7 @@ img.location__picture{
   color: #575757;
   padding: 4px 10px;
   margin: 14px 16px 0 0;
+  display: inline-block;
 }
 
 @media only screen and (min-width: 350px) {
@@ -215,11 +215,9 @@ img.location__picture{
 @media only screen and (min-width: 560px) {
   .profileCard {
     width: 33.3333%;
-    padding: 1.5%;
   }
 
   .location {
     width: 25%;
-    padding: .5% 1.5%;
   }
 }
