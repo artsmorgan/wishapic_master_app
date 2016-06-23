@@ -282,6 +282,7 @@ img.pictureGranted__image{
   font-weight: 600;
   font-size: 14px;
   line-height: 14px;
+  width: 100%;
 }
 
 .pictureGranted__user__time{
