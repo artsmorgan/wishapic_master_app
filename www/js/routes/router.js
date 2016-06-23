@@ -121,5 +121,10 @@ app.config(function($stateProvider, $urlRouterProvider) {
       url: '/tags',
       templateUrl: 'templates/tags.html'
   })
+  //setup state for locations
+  .state('picturesGranted', {
+      url: '/picturesGranted',
+      templateUrl: 'templates/picturesGranted.html'
+  })
   $urlRouterProvider.otherwise('/home');
 })

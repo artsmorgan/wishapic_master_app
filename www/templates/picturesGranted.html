@@ -1,0 +1,53 @@
+<ion-view view-title="pictures granted" class="backgroundGray" ng-controller="picturesGrantedCtrl"
+                                                    on-drag-right="onDragRight($event)"
+                                                    on-drag-left="onDragLeft($event)"
+                                                    on-release="onRelease($event)">
+  <ion-content>
+    <a class="ion-ios-arrow-thin-left buttonBack buttonBack_gray"></a>
+    <h2 class="title_button title_gray center">Happening Now</h2>
+    <div class="buttonPlaceholder">
+      <a class="button icon button_logo_green"></a>
+    </div>
+    <div class="profileCard profileCard_fullWidth">
+      <div class="profileCard__content">
+        <div class="profileCard__picturePlaceholder">
+          <img class="profileCard__picture" src="img/Transparent.png"
+                ng-style="{'background-image':'url(' + post.urlPicture + ')'}" />
+        </div>
+        <div class="profileCard__info">
+          <div class="profileCard__userPhoto"><img ng-src="{{user.profilePicture}} " /></div>
+          <p class="profileCard__userName">{{user.username}}</p>
+          <p class="profileCard__comment">{{post.description}}</p>
+        </div>
+        <div class="tagsContainer">
+          <span class="tag tag_pink" ng-repeat="tag in post.tags">{{tag}}</span>
+        </div>
+      </div>
+    </div>
+    <div class="picturesGrantedContainer">
+      <div class="pictureGranted" ng-repeat="picture in pictures">
+        <div class="pictureGranted__imagePlaceholder">
+          <img class="pictureGranted__image" src="img/Transparent.png"
+                ng-style="{'background-image':'url({{picture.urlPicture}})'}" />
+        </div>
+        <div class="pictureGranted__usersContainer">
+          <div class="pictureGranted__user">
+            <img class="pictureGranted__userPhoto" ng-src="{{user.profilePicture}}">
+            <span class="pictureGranted__userName">{{user.username}}</span><br>
+            <span class="pictureGranted__userLocation">{{user.location}}</span>
+          </div>
+          <div class="pictureGranted__user__time">
+            <span>&</span>
+            <span>{{picture.duration}} min ago</span>
+          </div>
+          <div class="pictureGranted__user">
+            <img class="pictureGranted__userPhoto" ng-src="{{picture.grantedTo.profilePicture}}">
+            <span class="pictureGranted__userName">{{picture.grantedTo.username}}</span><br>
+            <span class="pictureGranted__userLocation">{{picture.grantedTo.location}}</span>
+          </div>
+        </div>
+        <!--pictureGranted__usersContainer-->
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

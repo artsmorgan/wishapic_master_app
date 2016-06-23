@@ -45,3 +45,11 @@ app.factory('getTags', function ($http, $rootScope, $stateParams) {
     }
   };
 });
+
+app.factory('getPicturesGranted', function ($http, $rootScope, $stateParams) {
+  return {
+    all: function (userId) {
+      return $http.get(Env()+'/picturesGranted', { params: { id: userId } })
+    }
+  };
+});
