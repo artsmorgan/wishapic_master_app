@@ -53,3 +53,11 @@ app.factory('getPicturesGranted', function ($http, $rootScope, $stateParams) {
     }
   };
 });
+
+app.factory('getFollowPerson', function ($http, $rootScope, $stateParams) {
+  return {
+    all: function (userId) {
+      return $http.get(Env()+'/followPerson', { params: { id: userId } })
+    }
+  };
+});

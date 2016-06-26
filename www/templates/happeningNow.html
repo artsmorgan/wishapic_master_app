@@ -2,11 +2,11 @@
                                                     on-drag-right="onDragRight($event)"
                                                     on-drag-left="onDragLeft($event)"
                                                     on-release="onRelease($event)">
-  <ul class="actionButtons">
-    <li><a class="actionButton actionButton_green" id="wished_btn" on-touch="onTouch($event)">{{wished}}</a></li>
-    <li><a class="actionButton actionButton_red" id="granted_btn" on-touch="onTouch($event)">{{granted}}</a></li>
-    <li><a class="actionButton actionButton_blue" id="chat_btn" on-touch="onTouch($event)">{{chat}}</a></li>
-    <li><a class="actionButton actionButton_yellow" id="camera_btn" on-touch="onTouch($event)"></a></li>
+  <ul class="buttonCircleWrapper">
+    <li><a class="buttonCircle buttonCircle_green" id="wished_btn" on-touch="onTouch($event)">{{wished}}</a></li>
+    <li><a class="buttonCircle buttonCircle_red" id="granted_btn" on-touch="onTouch($event)">{{granted}}</a></li>
+    <li><a class="buttonCircle buttonCircle_blue" id="chat_btn" on-touch="onTouch($event)">{{chat}}</a></li>
+    <li><a class="buttonCircle buttonCircle_yellow" id="camera_btn" on-touch="onTouch($event)"></a></li>
   </ul>
   <ion-content class="padding">
     <h2 class="title_button title_gray center">
@@ -23,10 +23,12 @@
                   ng-style="{'background-image':'url({{card.urlPicture}})'}" />
           </div>
           <div class="profileCard__info">
-            <div class="profileCard__userPhoto">
-              <img src=" {{card.profilePicture}} " />
+            <div class="userBlock">
+              <img class="userBlock__profilePicture userBlock__profilePicture_medium userBlock__profilePicture_overlapTop" ng-src="{{card.profilePicture}}">
+              <div class="userBlock__info">
+                <span class="userBlock__info__name">{{card.username}}</span>
+              </div>
             </div>
-            <p class="profileCard__userName">{{card.username}}</p>
             <p class="profileCard__comment">{{card.description}}</p>
           </div>
           <div class="tagsContainer">
