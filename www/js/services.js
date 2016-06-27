@@ -61,3 +61,27 @@ app.factory('getFollowPerson', function ($http, $rootScope, $stateParams) {
     }
   };
 });
+
+app.factory('getFollowing', function ($http, $rootScope, $stateParams) {
+  return {
+    all: function (userId) {
+      return $http.get(Env()+'/following', { params: { id: userId } })
+    }
+  };
+});
+
+app.factory('indexList', function () {
+  return function(list) {
+    var currentCharacter = '';
+    var indexedList = {};
+    angular.forEach(list, function(user){
+      if (currentCharacter != user.username.charAt(0)) {
+        currentCharacter = user.username.charAt(0);
+        indexedList[currentCharacter] = [];
+      }
+      indexedList[currentCharacter].push(user);
+    });
+
+    return indexedList;
+  };
+});

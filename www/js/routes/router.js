@@ -131,5 +131,10 @@ app.config(function($stateProvider, $urlRouterProvider) {
       url: '/followPerson',
       templateUrl: 'templates/followPerson.html'
   })
+  //setup state for followPerson
+  .state('following', {
+      url: '/following',
+      templateUrl: 'templates/following.html'
+  })
   $urlRouterProvider.otherwise('/home');
 })
