@@ -24,6 +24,16 @@
   font-weight: 400;
 }
 
+ body .title_blue{
+   color: rgba(68,96,181, .7)!important;
+   font-weight: 400;
+ }
+
+.title_blue .title_circle{
+  background: rgba(68,96,181, .7);
+  color: #fff;
+}
+
 .title_green .title_circle{
   background: rgba(82,200,128, .7);
   color: #fff;
@@ -233,6 +243,14 @@ img.location__picture{
 
 .buttonBack_gray {
   color: #a7abae;
+}
+
+.buttonBack_green{
+  color: rgba(82,200,128, .7);
+}
+
+.buttonBack_blue{
+  color: rgba(68,96,181, .7);
 }
 
 .tagsContainer_flex {

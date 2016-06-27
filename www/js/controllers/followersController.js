@@ -3,7 +3,7 @@ app.controller('followersgCtrl', function ($scope, getFollowers, indexList, $loc
 
 	$scope.usersList = $scope.followingCount = null;
 
-	getFollowing.all(userId).success(function (response) {
+	getFollowers.all(userId).success(function (response) {
 		$scope.followersCount = response[0].users.length;
 		$scope.usersList = indexList(response[0].users);
 	});

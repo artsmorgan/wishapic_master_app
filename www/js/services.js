@@ -70,6 +70,14 @@ app.factory('getFollowing', function ($http, $rootScope, $stateParams) {
   };
 });
 
+app.factory('getFollowers', function ($http, $rootScope, $stateParams) {
+  return {
+    all: function (userId) {
+      return $http.get(Env()+'/followers', { params: { id: userId } })
+    }
+  };
+});
+
 app.factory('indexList', function () {
   return function(list) {
     var currentCharacter = '';
