@@ -7,15 +7,7 @@ app.controller('CameraCtrl', function ($scope, CONFIG, $location) {
 	var timePassed = null;
 	var maxTimeVideo = 5000;
 
-	$scope.hasChat = function(){
-		return true;
-	}
-	$scope.hasGranted = function(){
-		return true;
-	}
-	$scope.hasWished = function(){
-		return true;
-	}
+	
 
 	$scope.init = function(){
 		console.log('init');
@@ -24,14 +16,6 @@ app.controller('CameraCtrl', function ($scope, CONFIG, $location) {
 		});
 	}
 
-	$scope.onSwipeLeft = function(){
-		console.log('swipe left')
-		$location.path('/profile');
-	}
-	$scope.onSwipeRight = function(){
-		console.log('swipe right')
-		$location.path('/chat');
-	}	
 
 	$scope.takePicture = function($event) {
 		
@@ -65,39 +49,6 @@ app.controller('CameraCtrl', function ($scope, CONFIG, $location) {
 		timePassed = null;
 		$location.path('addPic');
 	};
-
-	
-
-	$scope.direction = null;
-
-	$scope.onDragRight = function(event){
-		// console.log(event);
-		 console.log('swipe right')
-		$scope.direction = 'right';
-		// $location.path('/chat');
-	}
-	$scope.onDragLeft = function(event){		
-		 console.log('swipe left')
-		$scope.direction = 'left';
-	}
-
-	$scope.onRelease = function(event){
-		var profile = '/chat';
-
-		if($scope.hasWished){
-			profile = '/wished';
-		}else if(!$scope.hasWished && $scope.hasGranted){
-			profile = '/granted';
-		}else{
-			profile = '/chat';			
-		}
-
-		if($scope.direction == 'left'){
-			$location.path('/profile');
-		}else if($scope.direction=='right'){
-			$location.path(profile);
-		}
-	}
 
 
 

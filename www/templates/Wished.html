@@ -14,7 +14,7 @@
             </div>
             <div class="item uppercase">
                 <ul class="mobileList">
-                    <li class="item" ng-repeat="user in usersList">
+                    <li class="item" ng-repeat="user in usersList" on-touch="getWished($event)">
                         <img class="title-image green" src="{{user.wishedPicture}}" width="110px" />
                         <div class="textbox">
                             <p>{{user.wishedName}}</p>

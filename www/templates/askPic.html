@@ -1,8 +1,8 @@
-<ion-view view-title="askPic" class="backgroundGray">
+<ion-view view-title="askPic" class="backgroundGray" ng-controller="AskPictureCtrl">
 	<div class="bar bar-header">
     <div class="list">
       <div class="item">
-        <a class="arrow" href=""><i class="ion-ios-arrow-thin-left"></i></a>
+        <a class="arrow" href="#/wished"><i class="ion-ios-arrow-thin-left"></i></a>
       </div>
     </div>
 </div>
@@ -22,7 +22,7 @@
             <div class="item"></div>
             <div class="item"></div>
             <div class="item">
-                <a class="btn-yes rightSpace" href="#"></a>
+                <a class="btn-yes rightSpace" href="#" on-touch="grantPicture($event)"></a>
                 <a class="btn-no" href="#"></a>
             </div>
             <div class="item"></div>
