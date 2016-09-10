@@ -1,0 +1,75 @@
+<ion-view view-title="getStarted" class="background2" ng-controller="GetStartedCtrl">
+	<div class="bar bar-header">
+    <div class="list">
+      <div class="item">
+        <a class="arrow" href="#/home"><i class="ion-ios-arrow-thin-left"></i></a>
+      </div>
+    </div>
+</div>
+	<ion-content class="padding center">
+		<div class="list">
+            <div class="item"></div>
+            <div class="item">
+		          <h2>GET STARTED</h2>
+            </div>
+            <div class="item"></div>
+            <div class="item borderTop borderBottom nopadding">
+        	   <form ng-submit="submit(model)" class="form" name="signup">
+<label class="item item-input ">
+    <i class="icon ion-ios-person-outline"></i>
+    <input  type="text" placeholder="Enter username" name="username" id="username"
+    ng-model="model.username"
+    ng-required="required" />
+</label>
+<label class="item item-input">
+    <i class="icon ion-ios-email-outline"></i>
+    <input type="text" placeholder="Enter email adress" name="email" id="email"
+    ng-model="model.email"
+    ng-required="required" />
+</label>
+<div>
+    <label class="short-input item item-input">
+        <input  type="number" ng-maxlength="2" placeholder="Age" name="age" id="age"
+        ng-model="model.age"
+        ng-required="required" />
+    </label>
+    <label class="short-input item item-input select-input">
+        <select name="gender" ng-model="model.gender"  ng-required="required">
+            <option value="" disabled selected>Gender</option>
+            <option value="f" checked="true">Female</option>
+            <option value="m">Male</option>
+        </select>
+    </label>
+    <div class="clear"></div>
+</div>
+<div class="clear"></div>
+<label class="item item-input select-input">
+    <i class="no-icon"></i>
+    <select name="country" id="country" ng-model="model.country"  ng-required="required">
+        <option value="US">United States</option> 
+        <option value="CR">Costa Rica</option>
+    </select>
+</label>
+<label class="item item-input">
+    <i class="ion-ios-locked-outline"></i>
+    <input type="password" placeholder="New Password" name="password" id="password"
+    ng-model="model.password"  ng-required="required" />
+</label>
+<label class="item item-input">
+    <i class="ion-ios-locked-outline"></i>
+    <input type="password" placeholder="Confirm Password" name="confpassword" id="confpassword"
+    ng-model="model.confpassword"  ng-required="required" />
+</label>
+                    <div class="item">
+                        <button type="submit" class="button button-outline button-wish">Join</button>
+                    </div>    
+              </form>
+            </div>
+		</div>
+	</ion-content>
+    <ion-footer-bar class="center" >
+  <div class="list terms">
+    <div class="item"><p>By Joining Wish A Pic you agree to the </p><p><a href="#" class="pink">Terms of Service</a> and <a href="#" class="pink">Privacy Policy</a></p></div>
+  </div>
+  </ion-footer-bar>
+</ion-view>

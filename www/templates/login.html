@@ -1,0 +1,38 @@
+<ion-view view-title="Login" name="login-view" class="background" id="login" ng-controller="LoginCtrl">
+  <div class="bar bar-header">
+    <div class="list">
+      <div class="item">
+        <a class="arrow" href="#/home"><i class="ion-ios-arrow-thin-left"></i></a>
+      </div>
+    </div>
+</div>
+  <ion-content class="padding center">
+      <div class="list">
+        <div class="item"></div>
+        <div class="item">
+          <h2>LOGIN</h2>
+        </div>
+        <div class="item"></div>
+        <form ng-submit="signin()" class="form">
+          <div class="item borderTop borderBottom nopadding">
+             <label class="item item-input">
+              <i class="icon ion-ios-email-outline"></i>
+                <input  type="text" placeholder="Username or Email" name="email" id="email" ng-model="model.email">
+            </label>
+            <label class="item item-input">
+                <i class="ion-ios-locked-outline"></i>
+                <input type="password" placeholder="Password" name="password" id="password" ng-model="model.password">
+            </label>
+          </div>
+          <div class="item">
+            <a href="#/forgotPass">Forgot Password?</a>
+          </div>
+          <div class="item"></div>
+          <div class="item"></div>
+          <div class="item">
+            <button class="button button-outline button-wish" type="submit">Login</button>
+          </div>
+        </div>
+      </form>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,36 @@
+<ion-view view-title="chat" class="backgroundGray" ng-controller="ChatCtrl">
+	<div class="bar bar-header">
+    <div class="list">
+      <div class="item">
+        <a class="arrow" href="#/happeningNow"><i class="ion-ios-arrow-thin-left"></i></a>
+      </div>
+    </div>
+</div>
+	<ion-content class="padding center" data-ng-init="usersAll()">
+		<div class="list">
+            <div class="item"></div>
+            
+            <div class="item">
+                <h2>Chat</h2> 
+                <label class="item item-input noBorder">
+                    <input type="search" placeholder="Search">
+                </label>
+            </div>
+                <div class="item">
+                    <ul class="chat" >
+                        <!-- <li ng-repeat="user in usersList">
+                            {{user.id}}
+                            {{user.name}}
+                            {{user.email}}
+                            {{user.picture}}
+                        </li> -->
+                        <!--<li><div class="chatTag">#</div>
+                            <img class="title-image" src="img/profile.jpg" width="100px" /></li>
+                        <li><div class="chatTag">#</div><img class="title-image" src="img/profile.jpg" width="100px" /></li>
+                        <li><img class="title-image" src="img/profile.jpg" width="100px" /></li>-->
+                    </ul>
+            </div>
+                <div class="item"></div>
+		</div>
+	</ion-content>
+</ion-view>

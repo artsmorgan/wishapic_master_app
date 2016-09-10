@@ -1,0 +1,76 @@
+<ion-view view-title="editProfile" class="backgroundGray">
+	<div class="bar bar-header">
+    <div class="list">
+      <div class="item">
+        <a class="arrow" href="#/profile"><i class="ion-ios-arrow-thin-left"></i></a>
+      </div>
+    </div>
+</div>
+	<ion-content class="padding center">
+		<div class="list">
+            <div class="item"></div>
+            <div class="item">
+                <img class="title-image" src="img/profile.jpg" width="110px" />
+            </div>
+            <div class="item">
+                <h2 class="bold">About you</h2>
+                <p>Lorem ipsum dolor</p>
+                <p>sit amet</p>
+                <p>consectetur adipiscing elit</p>
+                <p>Mauris id auctor</p>                
+            </div>
+            <div class="item borderTop borderBottom nopadding">
+		    <form ng-submit="" class="form">     
+                 <label class="item item-input ">
+                    <i class="icon ion-ios-person-outline"></i>
+                      <input  type="text" placeholder="Username" name="username" id="username" ng-model="model.username">
+                </label>
+                <label class="item item-input">
+                    <i class="icon ion-ios-email-outline"></i>
+                    <input type="text" placeholder="test@test.com" name="email" id="email" ng-model="model.email">
+                </label>
+                <div>
+                    <label class="short-input item item-input">
+                    <input  type="number" ng-maxlength="2" placeholder="Age" name="age" id="age" ng-model="model.age">
+                </label>
+                <label class="short-input item item-input">   
+                    <select >
+                        <option value="" disabled selected>Gender</option>
+                        <option value="f" checked="true">Female</option>
+                        <option value="m">Male</option>
+                    </select>
+                </label>
+                <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+                <label class="item item-input">
+                    <input  type="text" placeholder="Country" name="country" id="country" ng-model="model.country">
+                </label>
+                <label class="item item-input">
+                <i class="ion-ios-locked-outline"></i>
+                <input type="password" placeholder="New Password" name="newpassword" id="newpassword" ng-model="newPass">
+            </label>
+              <label class="item item-input">
+                <i class="ion-ios-locked-outline"></i>
+                <input type="password" placeholder="Confirm Password" name="confpassword" id="confpassword" ng-model="confPass">
+            </label>
+                </div> 
+                <div class="item"></div>
+                <div class="item">
+            <button class="button button-outline button-wish" type="submit">Save</button>
+          </div>
+        <div class="item">    
+            <label class=" noBorder checkbox item item-checkbox checkbox-wish ">Private Profile
+                <input type="checkbox">
+            </label>
+                <br/><a href="#" class="pink">Log out</a>
+                </div>
+		</div>
+        <div class="list terms">
+        <div class="item"><p>By Joining Wish A Pic you agree to the </p><p><a href="#" class="pink">Terms of Service</a> and <a href="#" class="pink">Privacy Policy</a></p></div>
+      </div>
+	</ion-content>
+  
+  
+  
+</ion-view>

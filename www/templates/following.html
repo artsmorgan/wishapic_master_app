@@ -1,0 +1,26 @@
+<ion-view view-title="follow person" class="backgroundGray" ng-controller="followingCtrl">
+	<ion-content class="padding">
+		<a class="ion-ios-arrow-thin-left buttonBack buttonBack_green"></a>
+		<h2 class="title_green center">
+			<span class="title_circle">{{followingCount}}</span>
+			Following
+		</h2>
+		<ul class="indexList">
+			<li class="indexList__group" ng-repeat="(index, users) in usersList">
+				<h3 class="indexList__group__title">{{index}}</h3>
+				<ul>
+					<li class="indexList__group__item" ng-repeat="user in users">
+						<div class="userBlock userBlock_directionColumn">
+							<img class="indexList__group__item userBlock__profilePicture" ng-src="{{user.profilePicture}}">
+							<div class="userBlock__info">
+								<span class="userBlock__info__name">{{user.username}}</span>
+								<span class="userBlock__info__location">{{user.location}}</span>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<!--indexList-->
+	</ion-content>
+</ion-view>

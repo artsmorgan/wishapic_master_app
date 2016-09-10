@@ -1,0 +1,42 @@
+<ion-view view-title="happening now" ng-controller="happeningNowCtrl"
+                                                    on-drag-right="onDragRight($event)"
+                                                    on-drag-left="onDragLeft($event)"
+                                                    on-release="onRelease($event)">
+  <ul class="buttonCircleWrapper">
+    <li><a class="buttonCircle buttonCircle_green"  id="wished_btn"  href="#/wished">{{wished}}</a></li>
+    <li><a class="buttonCircle buttonCircle_red"    id="granted_btn" href="#/granted">{{granted}}</a></li>
+    <li><a class="buttonCircle buttonCircle_blue"   id="chat_btn"    href="#/chat">{{chat}}</a></li>
+    <li><a class="buttonCircle buttonCircle_yellow" id="camera_btn"  href="#/addPic"></a></li>
+  </ul>
+  
+  <ion-content class="padding">
+    <h2 class="title_button title_gray center">
+      <span>Happening Now</span>
+        <span class="buttonContainer">
+        <a class="button icon button_bg_world" href="#/locations"></a>
+        </span></h2>
+    <div class="profileCardsContainer">
+
+      <div class="profileCard" ng-repeat="card in cards">
+        <div class="profileCard__content">
+          <div class="profileCard__picturePlaceholder">
+            <img class="profileCard__picture" data-ng-src="{{card.urlPicture}}" id="{{card._id}}"
+                  ng-style="{'background-image':'url(data:image/jpeg;base64,{{card.url}})'}" on-touch="getHappeningNow($event)"/>
+          </div>
+          <div class="profileCard__info">
+            <div class="userBlock">
+              <img class="userBlock__profilePicture userBlock__profilePicture_medium userBlock__profilePicture_overlapTop" ng-src="{{card.profilePicture}}">
+              <div class="userBlock__info">
+                <span class="userBlock__info__name">{{card.username}}</span>
+              </div>
+            </div>
+            <p class="profileCard__comment">{{card.description}}</p>
+          </div>
+          <div class="tagsContainer">
+            <span class="tag tag_pink" ng-repeat="tag in card.tags">{{tag}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
