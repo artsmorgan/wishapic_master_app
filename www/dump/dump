@@ -1,0 +1,19 @@
+{  "hashLogin" : "$2a$10$91DJM7cRY82VNM45S6/qNe2lia8VHRyMhB9mhZItHAC1E0tX3zIRy", "registeredDate" : "1467996622206", "lastIpLogin" : "::ffff:127.0.0.1", "password" : "$2a$10$KbC38NkpLBBnS3OysXHjieu8eufvD3rh6qIqYDDRyuxdamT30NwLa", "email" : "pierre@gmail.com", "username" : "pierre", "isBlocked" : 1,  "activeDate" : "1467997885486" }
+
+{  "hashLogin" : "$2a$10$91DJM7cRY82VNM45S6/qNe2lia8VHRyMhB9mhZItHAC1E0tX3zIRy", "registeredDate" : "1467996622206", "lastIpLogin" : "::ffff:127.0.0.1", "password" : "$2a$10$KbC38NkpLBBnS3OysXHjieu8eufvD3rh6qIqYDDRyuxdamT30NwLa", "email" : "armando@gmail.com", "username" : "armando", "isBlocked" : 1,  "activeDate" : "1467997885486" }
+
+
+///chat Id
+
+578421fe9fde508bb875d53d
+
+
+db.chats.find({$and: [{createdBy: "577fd9ce4a60bf9a136629df"}, {receiver: "577fead7107b3a2bf875ea74" }]}).pretty();
+
+db.chats.find({$and: [{createdBy: "577fead7107b3a2bf875ea74"}, {receiver: "577fd9ce4a60bf9a136629df" }]}).pretty();
+
+
+db.chats.find({$and: [{ $or: [{createdBy: "577fead7107b3a2bf875ea74"}, {receiver: "577fead7107b3a2bf875ea74" }] },{ $or: [{createdBy: "577fd9ce4a60bf9a136629df"}, {receiver: "577fd9ce4a60bf9a136629df" }] }]}
+
+
+57844831d6d641d0e382dd9e

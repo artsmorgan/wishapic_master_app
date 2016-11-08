@@ -20,6 +20,12 @@
          url('font/Quicksand-Bold.ttf') format('truetype'),
          url('font/Quicksand-Bold.svg#Quicksand-Bold') format('svg');
 }
+
+html,body {
+    margin:0;
+    padding:0;
+    height:100%;
+}
 /*-*-*-*-*-*-* Elements*-*-*-*-*-*/
 select{
     background: transparent;
@@ -130,7 +136,7 @@ h6 { font-size: 10px!important;}
     /*font-family: 'Quicksand-Bold', Helvetica, Arial, sans-serif;*/
 }
 .home{
-	 /*background: linear-gradient(transparent 0%,#000 150%), url("../img/test1.jpg") no-repeat center center; */
+	 background: linear-gradient(transparent 0%,#000 150%), url("../img/test1.jpg") no-repeat center center; 
 
 	-webkit-background-size: cover;
     -moz-background-size: cover;
@@ -543,7 +549,7 @@ ul.circleList li h6{
 #addPic .scroll,
 #camera .scroll{
     position: absolute;
-    padding: 10px 0 !important;
+    padding:  0 !important;
     width: 100%;
     height: 100%;
 }
@@ -551,7 +557,7 @@ ul.circleList li h6{
 #camera .scroll .footer-camera{
     position: fixed;
     bottom: 5%;
-    width: 90%;
+    width: 100%;
 }
 
 #addPic .scroll .footer-camera .disabled-link{
@@ -559,7 +565,7 @@ ul.circleList li h6{
     color:#fff;
 }
 #addPic .scroll .footer-camera .bottomItem .buttons{
-    margin-right: 20px;
+    margin-right: 10px;
 }
 #addPic .scroll .footer-camera .btn-pink p,
 #addPic .scroll .footer-camera .disabled-link p{
@@ -567,7 +573,56 @@ ul.circleList li h6{
 }
 
 #addPic .scroll .footer-camera .selected-btn{
-    border: 1px solid #fff;
+    border: 3px solid red;
 }
 
+.select-input{
+    margin: 0;
+    padding: 10px 0;
+}
 
+.bar-footer .list p{
+    color: #000;
+}
+.bar-footer .list .item{
+    padding: 3px 0;
+}
+
+#myPic{
+    position: fixed;
+    top:0;
+    left:0;
+}
+
+.timmer{}
+.timmer select{
+    font-size: 36px;
+    margin-left: 25px;
+    width: 71%;
+    color: #000;
+}
+.timmer .col-timmer{
+    display: inline-block;
+    width:30%;
+    text-align:center;
+}
+
+.timmer .actions{
+    width: 95%;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.modal{
+    box-shadow: 1px 1px 1px 4px #ccc;
+    display: block;
+    position: absolute;
+    top: inherit !important;
+    z-index: 10;
+    overflow: hidden;
+    min-height: 35% !important;
+    width: 100%;
+    background-color: #fff;
+    bottom: 0;
+    border-top: 1px solid #ccc;
+}

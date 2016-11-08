@@ -6,7 +6,7 @@
       </div>
     </div>
 </div>
-	<ion-content class="padding center" data-ng-init="usersAll()">
+	<ion-content class="padding center">
 		<div class="list">
             <div class="item"></div>
             
@@ -16,21 +16,15 @@
                     <input type="search" placeholder="Search">
                 </label>
             </div>
-                <div class="item">
-                    <ul class="chat" >
-                        <!-- <li ng-repeat="user in usersList">
-                            {{user.id}}
-                            {{user.name}}
-                            {{user.email}}
-                            {{user.picture}}
-                        </li> -->
-                        <!--<li><div class="chatTag">#</div>
-                            <img class="title-image" src="img/profile.jpg" width="100px" /></li>
-                        <li><div class="chatTag">#</div><img class="title-image" src="img/profile.jpg" width="100px" /></li>
-                        <li><img class="title-image" src="img/profile.jpg" width="100px" /></li>-->
-                    </ul>
+            <div class="item">
+                    <div class="locationsContainer">
+                      <div class="location" ng-repeat="user in users | filter:searchText">
+                        <img class="location__picture" src="img/Transparent.png" ng-style="{'background-image': 'url({{user.avatar}})'}" on-touch="getChatList($event)" id="{{user.userId}}" chatId="{{user.chatID}}">
+                        <span class="location__name">{{user.username}}</span>
+                      </div>                      
+                    </div>
             </div>
-                <div class="item"></div>
+            <div class="item"></div>
 		</div>
 	</ion-content>
 </ion-view>

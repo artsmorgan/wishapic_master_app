@@ -14,9 +14,13 @@
     "gulp-util": "^2.2.14",
     "shelljs": "^0.3.0"
   },
-  "cordovaPlugins": [],
+  "cordovaPlugins": [
+    {
+      "locator": "https://github.com/crosswalk-project/cordova-plugin-crosswalk-webview.git",
+      "id": "cordova-plugin-crosswalk-webview"
+    }
+  ],
   "cordovaPlatforms": [
-    "android",
     "ios"
   ]
 }

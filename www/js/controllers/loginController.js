@@ -1,4 +1,4 @@
-app.controller('LoginCtrl', function ($scope, CONFIG, $localStorage, User,$location) {	
+app.controller('LoginCtrl', function ($scope, CONFIG, $localStorage, User,$location,$ionicPopup) {	
 	
 	$scope.model = {};
 	var pageId = CONSTANTS.pageId.login;
@@ -8,6 +8,13 @@ app.controller('LoginCtrl', function ($scope, CONFIG, $localStorage, User,$locat
 
 	$scope.email = 'hello';
 
+    var alertPopup = function(title, msg){
+        return $ionicPopup.alert({
+            title: title,
+            template: msg
+        });   
+    }
+
 	$scope.signin = function() {
             
             var formData = {
@@ -15,52 +22,22 @@ app.controller('LoginCtrl', function ($scope, CONFIG, $localStorage, User,$locat
                 password: $scope.model.password
             }
 
+            // console.log(formData);
 
-            User.signin(formData, function(res) {
-            	console.log('res',res);
-                if (res.type == false) {
-                    alert(res.data)    
-                } else {                	
-                    $localStorage.token = res.token;
-                    $location.path('/camera');
+            User.login(formData, function(res) {
+                // console.log('res outside',res)
+            	// console.log('res',res);
+                if (res.error) {
+                    alertPopup('Error',res.error);    
+                } else {                              	
+                    // console.log(res)
+                    $localStorage.user = res;
+                    $location.path('/happeningNow');
                 }
             }, function() {
-                $rootScope.error = 'Failed to signin';
+                alertPopup('Error','Invalid Login');
             })
         };
  
-    // $scope.signup = function() {
-    //     var formData = {
-    //         email: $scope.email,
-    //         password: $scope.password
-    //     }
-
-    //     Main.save(formData, function(res) {
-    //         if (res.type == false) {
-    //             alert(res.data)
-    //         } else {
-    //             $localStorage.token = res.data.token;
-    //             window.location = "/"   
-    //         }
-    //     }, function() {
-    //         $rootScope.error = 'Failed to signup';
-    //     })
-    // };
-
-    // $scope.me = function() {
-    //     Main.me(function(res) {
-    //         $scope.myDetails = res;
-    //     }, function() {
-    //         $rootScope.error = 'Failed to fetch details';
-    //     })
-    // };
-
-    // $scope.logout = function() {
-    //     Main.logout(function() {
-    //         window.location = "/"
-    //     }, function() {
-    //         alert("Failed to logout!");
-    //     });
-    // };
-    // $scope.token = $localStorage.token;
+   
 })

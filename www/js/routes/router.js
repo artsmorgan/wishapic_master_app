@@ -32,7 +32,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
 
   //setup state for Confirm Email
   .state('confirmEmail', {
-      url: '/confirmEmail',
+      url: '/confirmEmail/:email',
       templateUrl: 'templates/confirmEmail.html'
   })
     //setup state for new Password
@@ -47,6 +47,11 @@ app.config(function($stateProvider, $urlRouterProvider) {
       templateUrl: 'templates/profile.html'
   })
 
+   .state('viewProfile', {
+      url: '/viewProfile/:userId',
+      templateUrl: 'templates/viewProfile.html'
+  })
+
     //setup state for Edit Profile
   .state('editProfile', {
       url: '/editProfile',
@@ -55,6 +60,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
 
   //setup state for Chat
   .state('chat', {
+      cache: false,
       url: '/chat',
       templateUrl: 'templates/chat.html'
   })
@@ -80,19 +86,20 @@ app.config(function($stateProvider, $urlRouterProvider) {
    //setup state for Wished
   .state('wished', {
       url: '/wished',
-      templateUrl: 'templates/Wished.html'
+      templateUrl: 'templates/wished.html'
   })
 
   //setup state for Granted
   .state('granted', {
       url: '/granted',
-      templateUrl: 'templates/Granted.html'
+      templateUrl: 'templates/granted.html'
   })
 
 
   //setup state for new Password
   .state('chatRoom', {
-      url: '/chatRoom/:userId',
+      cache: false,
+      url: '/chatRoom/:userId/:chatId',
       templateUrl: 'templates/chat-room.html'
   })
   //setup state for profilePic
@@ -103,7 +110,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
     //setup state for AddPic
   .state('addPic', {
       url: '/addPic',
-      templateUrl: 'templates/AddPic.html'
+      templateUrl: 'templates/addPic.html'
   })
 
   //setup state for happeningNow
@@ -123,8 +130,23 @@ app.config(function($stateProvider, $urlRouterProvider) {
   })
   //setup state for locations
   .state('picturesGranted', {
-      url: '/picturesGranted',
+      url: '/picturesGranted/:pictureId',
       templateUrl: 'templates/picturesGranted.html'
+  })
+  //setup state for followPerson
+  .state('followPerson', {
+      url: '/followPerson',
+      templateUrl: 'templates/followPerson.html'
+  })
+  //setup state for following
+  .state('following', {
+      url: '/following',
+      templateUrl: 'templates/following.html'
+  })
+  //setup state for following
+  .state('followers', {
+      url: '/followers',
+      templateUrl: 'templates/followers.html'
   })
   $urlRouterProvider.otherwise('/home');
 })

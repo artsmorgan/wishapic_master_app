@@ -1,6 +1,7 @@
 var SETTINGS = {};
 	SETTINGS.localServer = 'http://localhost:3000';
-	SETTINGS.remoteServer = '';//TODO
+	SETTINGS.remoteServer = 'http://127.0.0.1:3005/api';//TODO
+	SETTINGS.remoteTestServer = 'http://45.55.140.212:3005/api';
 
 
 var CONSTANTS = {};
@@ -9,7 +10,6 @@ var CONSTANTS = {};
 		login : 2
 	}
 
-var Env = function(){
-	local = true;
-	return (local) ? SETTINGS.localServer : SETTINGS.remoteServer;
+var Env = function(){	
+	return SETTINGS.remoteServer;
 }

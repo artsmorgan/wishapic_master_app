@@ -1,4 +1,4 @@
-app.controller('happeningNowCtrl', function ($scope, getHappeningNow,$location,$state) {
+app.controller('happeningNowCtrl', function ($scope, getHappeningNow,getNotifications,$location,$state) {
 
 	//show hide buttons if notifications
 	var wished_btn = document.getElementById('wished_btn');
@@ -43,15 +43,15 @@ app.controller('happeningNowCtrl', function ($scope, getHappeningNow,$location,$
 	}
 
 	$scope.onRelease = function(event){
-		var profile = '/chat';
-
-		if($scope.hasWished){
-			profile = '/wished';
-		}else if(!$scope.hasWished && $scope.hasGranted){
-			profile = '/granted';
-		}else{
-			profile = '/chat';			
-		}
+//		var profile = '/chat';
+//
+//		if($scope.hasWished){
+//			profile = '/wished';
+//		}else if(!$scope.hasWished && $scope.hasGranted){
+//			profile = '/granted';
+//		}else{
+//			profile = '/chat';			
+//		}
 
 		if($scope.direction == 'left'){
 			$location.path('/profile');
@@ -59,24 +59,34 @@ app.controller('happeningNowCtrl', function ($scope, getHappeningNow,$location,$
 			$location.path(profile);
 		}
 	}
-
-
-	getHappeningNow.all(userId).success(function (response) {		
-		$scope.cards = response[0].posts;
-		$scope.wished = response[0].notifications.wished;
-		$scope.granted = response[0].notifications.granted;
-		$scope.chat = response[0].notifications.chat;
-		$scope.camera = response[0].notifications.camera;
+	getNotifications.all(userId).success(function (response) {
+                                         console.log(response);
+		$scope.wished = response.notifications.wished;
+		$scope.granted = response.notifications.granted;
+		$scope.chat = response.notifications.chat;
+		$scope.camera = response.notifications.camera;
 
 		wished_btn.style.display = ($scope.wished > 0) ? "inline-block " : "none";
 		granted_btn.style.display = ($scope.granted > 0) ? "inline-block " : "none";
 		chat_btn.style.display = ($scope.chat > 0) ? "inline-block " : "none";
-		camera_btn.style.display = ($scope.camera > 0) ? "inline-block " : "none";
+//		camera_btn.style.display = ($scope.camera > 0) ? "inline-block " : "none";
+	});
 
+	getHappeningNow.all(userId).success(function (response) {
+                                        console.log('happening now: ');
+                                        console.log(response);
+		$scope.cards = response.docs;
 	});
 
 	$scope.getHappeningNow = function($event){
-		$state.go('picturesGranted')
+               var id = $event.target.attributes.id.value;
+               $state.go('picturesGranted',{pictureId:id})
+	}
+
+	$scope.getProfile = function($event){
+		// console.log($event);
+       var id = $event.target.attributes.id.value;
+       $state.go('viewProfile',{userId:id})
 	}
 
 	$scope.onTouch = function($event){

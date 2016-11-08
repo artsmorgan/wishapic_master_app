@@ -1,4 +1,11 @@
 {
   "name": "wishapic",
-  "app_id": ""
+  "app_id": "b5bddcea",
+  "browsers": [
+    {
+      "platform": "android",
+      "browser": "crosswalk",
+      "version": "15.44.384.13"
+    }
+  ]
 }

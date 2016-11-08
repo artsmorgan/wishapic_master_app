@@ -1,13 +1,12 @@
-app.controller('picturesGrantedCtrl', function ($scope, getPicturesGranted,$location) {
+app.controller('picturesGrantedCtrl', function ($scope, getPicturesGranted,$location,$stateParams) {
 
-	var userId = 1;
-
-	$scope.user = $scope.post = $scope.pictures = null;
-
-	getPicturesGranted.all(userId).success(function (response) {
-		$scope.user = response[0].user;
-		$scope.post = response[0].post;
-		$scope.pictures = response[0].pictures;
+               var pictureId = $stateParams.pictureId;
+                 console.log(pictureId);
+	getPicturesGranted.all(pictureId).success(function (response) {
+                                           console.log(response);
+		$scope.user = response.user;
+//		$scope.post = response[0].post;
+		$scope.picture = response.docs;
 
 	});
 

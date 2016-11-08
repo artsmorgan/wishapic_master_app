@@ -1,4 +1,4 @@
-<ion-view view-title="confirmEmail" class="background2">
+<ion-view view-title="confirmEmail" class="background2" ng-controller="ConfirmEmailCtrl">
 	<div class="bar bar-header">
     <div class="list">
       <div class="item">
@@ -17,7 +17,7 @@
                 <p>A confirmation email has been sent to:</p>
                 <div class="item item-input">
                     <i class="icon ion-ios-email-outline"></i>
-                    <p>test@test.com</p>
+                    <p>{{email}}</p>
                 </div>
             </div>
             <div class="item message">

@@ -1,0 +1,33 @@
+<ion-view view-title="follow person" class="backgroundGray" ng-controller="followPersonCtrl">
+	<ion-content class="padding">
+		<a class="ion-ios-arrow-thin-left buttonBack buttonBack_gray"></a>
+		<div class="userBlock userBlock_marginFixed">
+			<img class="userBlock__profilePicture userBlock__profilePicture_fixedSize_big noborder" ng-src="{{userInfo.profilePicture}}">
+			<div class="userBlock__info">
+				<span class="userBlock__info__name userBlock__info__name_big">Sofia Crespy</span>
+			</div>
+		</div>
+		<ul class="circleListV2">
+			<li class="circleListV2__item">
+				<span class="circleListV2__item__circle">{{userInfo.followingCount}}</span>
+				Following
+			</li>
+			<li class="circleListV2__item">
+				<span class="circleListV2__item__circle">{{userInfo.picturesCount}}</span>
+				Pictures
+			</li>
+			<li class="circleListV2__item">
+				<span class="circleListV2__item__circle">{{userInfo.followersCount}}</span>
+				Followers
+			</li>
+		</ul>
+		<ul class="descriptionList">
+			<li ng-repeat="description in userInfo.descriptions">{{description}}</li>
+		</ul>
+		<div class="buttonWrapper">
+			<a class="buttonCircle buttonCircle_green buttonCircle_textBig">+</a>
+			<span class="buttonWrapper__description">Follow</span>
+		</div>
+
+	</ion-content>
+</ion-view>
