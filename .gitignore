@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Specifies intentionally untracked files to ignore when using Git
 # http://git-scm.com/docs/gitignore
 
@@ -5,3 +6,10 @@ node_modules/
 platforms/
 plugins/
 .DS_Store
+=======
+*.mode1v3
+*.perspectivev3
+*.pbxuser
+.DS_Store
+build/
+>>>>>>> a4a2155793a90b8d8feb1e533cb866b0a6973e12

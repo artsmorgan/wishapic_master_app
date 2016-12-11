@@ -79,6 +79,7 @@ app.controller('happeningNowCtrl', function ($scope, getHappeningNow,getNotifica
 	});
 
 	$scope.getHappeningNow = function($event){
+<<<<<<< HEAD
                var id = $event.target.attributes.id.value;
                $state.go('picturesGranted',{pictureId:id})
 	}
@@ -89,6 +90,12 @@ app.controller('happeningNowCtrl', function ($scope, getHappeningNow,getNotifica
        $state.go('viewProfile',{userId:id})
 	}
 
+=======
+               var id = $event.srcElement.id;
+               $state.go('picturesGranted',{pictureId:id})
+	}
+
+>>>>>>> a4a2155793a90b8d8feb1e533cb866b0a6973e12
 	$scope.onTouch = function($event){
 		var id = $event.path[0].id;
 		switch(id){

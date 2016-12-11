@@ -47,11 +47,14 @@ app.config(function($stateProvider, $urlRouterProvider) {
       templateUrl: 'templates/profile.html'
   })
 
+<<<<<<< HEAD
    .state('viewProfile', {
       url: '/viewProfile/:userId',
       templateUrl: 'templates/viewProfile.html'
   })
 
+=======
+>>>>>>> a4a2155793a90b8d8feb1e533cb866b0a6973e12
     //setup state for Edit Profile
   .state('editProfile', {
       url: '/editProfile',
@@ -60,7 +63,10 @@ app.config(function($stateProvider, $urlRouterProvider) {
 
   //setup state for Chat
   .state('chat', {
+<<<<<<< HEAD
       cache: false,
+=======
+>>>>>>> a4a2155793a90b8d8feb1e533cb866b0a6973e12
       url: '/chat',
       templateUrl: 'templates/chat.html'
   })
@@ -98,8 +104,12 @@ app.config(function($stateProvider, $urlRouterProvider) {
 
   //setup state for new Password
   .state('chatRoom', {
+<<<<<<< HEAD
       cache: false,
       url: '/chatRoom/:userId/:chatId',
+=======
+      url: '/chatRoom/:userId',
+>>>>>>> a4a2155793a90b8d8feb1e533cb866b0a6973e12
       templateUrl: 'templates/chat-room.html'
   })
   //setup state for profilePic

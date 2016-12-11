@@ -1,0 +1,28 @@
+<ion-view view-title="Wished" class="backgroundGray" ng-controller="WishedCtrl">
+	<div class="bar bar-header">
+    <div class="list">
+      <div class="item">
+        <a class="arrow" href="#/happeningNow"><i class="ion-ios-arrow-thin-left"></i></a>
+      </div>
+    </div>
+</div>
+	<ion-content class="padding" data-ng-init="usersAll()">
+		<div class="list">
+            <div class="item"></div>
+            <div class="item center">
+                <h1 class="greenFont">Wished</h1>
+            </div>
+            <div class="item uppercase">
+                <ul class="mobileList">
+                    <li class="item" ng-repeat="user in usersList" on-touch="getWished($event)">
+                        <img class="title-image green" src="{{user.wishedPicture}}" width="110px" />
+                        <div class="textbox">
+                            <p>{{user.wishedName}}</p>
+                            <h6>{{user.wishedLocation}}</h6>
+                        </div>  
+                    </li>                                       
+                </ul>                
+            </div>            
+		</div>
+	</ion-content>
+</ion-view>

@@ -143,10 +143,16 @@ img.profileCard__picture, img.pictureGranted__image {
 }
 
 .profileCard__comment {
+<<<<<<< HEAD
   margin: 0;
   color: #878988;
   font-size: 14px;
   padding: 0 8px;
+=======
+  color: #878988;
+  font-size: 14px;
+  padding: 4px 8px 0;
+>>>>>>> a4a2155793a90b8d8feb1e533cb866b0a6973e12
   line-height: 18px;
   text-align: justify;
 }
@@ -180,10 +186,17 @@ img.profileCard__picture, img.pictureGranted__image {
 }
 
 .tag {
+<<<<<<< HEAD
       border-radius: 10px;
     font-size: 12px;
     display: inline-block;
     margin: 5px 5px 4px 0;
+=======
+  border-radius: 10px;
+  font-size: 16px;
+  display: inline-block;
+  margin: 0 5px 4px 0;
+>>>>>>> a4a2155793a90b8d8feb1e533cb866b0a6973e12
 }
 
 .tag_pink {
@@ -354,7 +367,10 @@ img.userBlock__profilePicture {
 .userBlock__info__name {
   font-size: 1em;
   display: block;
+<<<<<<< HEAD
   text-transform: capitalize;
+=======
+>>>>>>> a4a2155793a90b8d8feb1e533cb866b0a6973e12
 }
 
 .userBlock__info__location {
@@ -483,6 +499,7 @@ body .noborder{
     width: 20%;
   }
 }
+<<<<<<< HEAD
 
 /* Alex fixes */
 img.userBlock__profilePicture {
@@ -508,3 +525,5 @@ img.profileCard__picture{
 .right-icon{
   float: right;
 }
+=======
+>>>>>>> a4a2155793a90b8d8feb1e533cb866b0a6973e12

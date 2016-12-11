@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 app.controller('ChatRoomCtrl', function( $scope, getUser, $location, $stateParams, $state, Poller, $interval,
                                           $timeout, $ionicScrollDelegate, $localStorage, chatStorage, $rootScope) {
   
@@ -126,11 +127,21 @@ $scope.$on('$ionicView.enter',function(){
 
   var alternate,
   isIOS = ionic.Platform.isWebView() && ionic.Platform.isIOS();
+=======
+app.controller('ChatRoomCtrl', function($scope, $timeout, $ionicScrollDelegate) {
+  
+
+  $scope.hideTime = true;
+
+  var alternate,
+    isIOS = ionic.Platform.isWebView() && ionic.Platform.isIOS();
+>>>>>>> a4a2155793a90b8d8feb1e533cb866b0a6973e12
 
   $scope.sendMessage = function() {
     alternate = !alternate;
 
     var d = new Date();
+<<<<<<< HEAD
     d = d.toLocaleTimeString().replace(/:\d+ /, ' ');
 
     var msjObj = {
@@ -148,6 +159,16 @@ $scope.$on('$ionicView.enter',function(){
     });
 
 
+=======
+  d = d.toLocaleTimeString().replace(/:\d+ /, ' ');
+
+    $scope.messages.push({
+      userId: alternate ? '12345' : '54321',
+      text: $scope.data.message,
+      time: d
+    });
+
+>>>>>>> a4a2155793a90b8d8feb1e533cb866b0a6973e12
     delete $scope.data.message;
     $ionicScrollDelegate.scrollBottom(true);
 
@@ -172,6 +193,12 @@ $scope.$on('$ionicView.enter',function(){
   };
 
 
+<<<<<<< HEAD
   
+=======
+  $scope.data = {};
+  $scope.myId = '12345';
+  $scope.messages = [];
+>>>>>>> a4a2155793a90b8d8feb1e533cb866b0a6973e12
 
 })

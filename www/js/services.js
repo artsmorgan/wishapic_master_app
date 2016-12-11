@@ -30,6 +30,7 @@ app.factory('getHappeningNow', function ($http, $rootScope, $stateParams) {
   };
 });
 
+<<<<<<< HEAD
 app.factory('getUser', function ($http, $rootScope, $stateParams) {
   return {
     byId: function (userId) {
@@ -38,6 +39,8 @@ app.factory('getUser', function ($http, $rootScope, $stateParams) {
   };
 });
 
+=======
+>>>>>>> a4a2155793a90b8d8feb1e533cb866b0a6973e12
 app.factory('getNotifications', function ($http, $rootScope, $stateParams) {
   return {
     all: function (userId) {
@@ -78,6 +81,7 @@ app.factory('getFollowPerson', function ($http, $rootScope, $stateParams) {
   };
 });
 
+<<<<<<< HEAD
 app.factory('getChatList', function ($http, $rootScope, $stateParams) {
   return {
     all: function (userId) {
@@ -86,10 +90,13 @@ app.factory('getChatList', function ($http, $rootScope, $stateParams) {
   };
 });
 
+=======
+>>>>>>> a4a2155793a90b8d8feb1e533cb866b0a6973e12
 app.factory('getFollowing', function ($http, $rootScope, $stateParams) {
   return {
     all: function (userId) {
       return $http.get(Env()+'/following', { params: { id: userId } })
+<<<<<<< HEAD
     },
     count: function (userId) {
       return $http.get(Env()+'/following/count', { params: { id: userId } })
@@ -119,6 +126,9 @@ app.factory('chatStorage', function ($http, $rootScope, $stateParams) {
       return $http.post(Env()+'/chat/updateMessageById', {messages: msjObj})
     }
 
+=======
+    }
+>>>>>>> a4a2155793a90b8d8feb1e533cb866b0a6973e12
   };
 });
 
@@ -126,6 +136,7 @@ app.factory('getFollowers', function ($http, $rootScope, $stateParams) {
   return {
     all: function (userId) {
       return $http.get(Env()+'/followers', { params: { id: userId } })
+<<<<<<< HEAD
     },
     count: function (userId) {
       return $http.get(Env()+'/followers/count', { params: { id: userId } })
@@ -145,6 +156,10 @@ app.factory('Poller', function($http,$q){
         }
 
     }
+=======
+    }
+  };
+>>>>>>> a4a2155793a90b8d8feb1e533cb866b0a6973e12
 });
 
 app.factory('indexList', function () {

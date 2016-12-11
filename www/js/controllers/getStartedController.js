@@ -1,7 +1,10 @@
 app.controller('GetStartedCtrl', function ($scope, CONFIG, $localStorage, User,$location,$ionicPopup) {	
 	//quick validation
     $scope.model = {};
+<<<<<<< HEAD
     $scope.model = {};
+=======
+>>>>>>> a4a2155793a90b8d8feb1e533cb866b0a6973e12
     var pageId = CONSTANTS.pageId.login;
     
     CONFIG.all(pageId).success(function (response) {
@@ -27,6 +30,7 @@ app.controller('GetStartedCtrl', function ($scope, CONFIG, $localStorage, User,$
         return errorArr;
     }
 
+<<<<<<< HEAD
 	$scope.countries = [
             {
                 id:"",
@@ -41,6 +45,9 @@ app.controller('GetStartedCtrl', function ($scope, CONFIG, $localStorage, User,$
                 name: "United states"
             }
         ];
+=======
+	
+>>>>>>> a4a2155793a90b8d8feb1e533cb866b0a6973e12
 
     //Logout everything
     delete $localStorage;
