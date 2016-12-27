@@ -22,7 +22,7 @@ app.controller('LoginCtrl', function ($scope, CONFIG, $localStorage, User,$locat
                 password: $scope.model.password
             }
 
-<<<<<<< HEAD
+
             console.log(formData);
 
             // $http.get('http://107.170.47.77:3005/api/').success(function(data, status, headers, config) {
@@ -37,29 +37,18 @@ app.controller('LoginCtrl', function ($scope, CONFIG, $localStorage, User,$locat
             	console.log('res',res);
                 if (res.error) {
                     console.log('Error',res.error);
-=======
-            // console.log(formData);
 
-            User.login(formData, function(res) {
-                // console.log('res outside',res)
-            	// console.log('res',res);
-                if (res.error) {
->>>>>>> a4a2155793a90b8d8feb1e533cb866b0a6973e12
                     alertPopup('Error',res.error);    
                 } else {                              	
                     // console.log(res)
                     $localStorage.user = res;
-<<<<<<< HEAD
+
                     $location.path('/happeningNow');
                 }
             }, function(e) {
                 console.log('e');
                 console.log(e);
-=======
-                    $location.path('/addPic');
-                }
-            }, function() {
->>>>>>> a4a2155793a90b8d8feb1e533cb866b0a6973e12
+
                 alertPopup('Error','Invalid Login');
             })
         };

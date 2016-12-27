@@ -1,11 +1,12 @@
-app.controller('happeningNowCtrl', function ($scope, getHappeningNow,getNotifications,$location,$state) {
+app.controller('happeningNowCtrl', function ($scope, getHappeningNow,getNotifications,$location,$state,$localStorage) {
 
 	//show hide buttons if notifications
 	var wished_btn = document.getElementById('wished_btn');
 	var granted_btn = document.getElementById('granted_btn');
 	var chat_btn = document.getElementById('chat_btn');
 	var camera_btn = document.getElementById('camera_btn');
-	var userId = 1;
+	var localStorage = $localStorage.user;
+	var userId = localStorage.id;
 
 	$scope.cards = null;
 
@@ -79,8 +80,10 @@ app.controller('happeningNowCtrl', function ($scope, getHappeningNow,getNotifica
 	});
 
 	$scope.getHappeningNow = function($event){
-<<<<<<< HEAD
+
                var id = $event.target.attributes.id.value;
+               // console.log(id);
+               // $state.go('chatRoom',{userId:id});
                $state.go('picturesGranted',{pictureId:id})
 	}
 
@@ -90,12 +93,6 @@ app.controller('happeningNowCtrl', function ($scope, getHappeningNow,getNotifica
        $state.go('viewProfile',{userId:id})
 	}
 
-=======
-               var id = $event.srcElement.id;
-               $state.go('picturesGranted',{pictureId:id})
-	}
-
->>>>>>> a4a2155793a90b8d8feb1e533cb866b0a6973e12
 	$scope.onTouch = function($event){
 		var id = $event.path[0].id;
 		switch(id){

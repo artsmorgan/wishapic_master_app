@@ -30,7 +30,7 @@ app.factory('getHappeningNow', function ($http, $rootScope, $stateParams) {
   };
 });
 
-<<<<<<< HEAD
+
 app.factory('getUser', function ($http, $rootScope, $stateParams) {
   return {
     byId: function (userId) {
@@ -39,8 +39,7 @@ app.factory('getUser', function ($http, $rootScope, $stateParams) {
   };
 });
 
-=======
->>>>>>> a4a2155793a90b8d8feb1e533cb866b0a6973e12
+
 app.factory('getNotifications', function ($http, $rootScope, $stateParams) {
   return {
     all: function (userId) {
@@ -81,7 +80,7 @@ app.factory('getFollowPerson', function ($http, $rootScope, $stateParams) {
   };
 });
 
-<<<<<<< HEAD
+
 app.factory('getChatList', function ($http, $rootScope, $stateParams) {
   return {
     all: function (userId) {
@@ -90,13 +89,11 @@ app.factory('getChatList', function ($http, $rootScope, $stateParams) {
   };
 });
 
-=======
->>>>>>> a4a2155793a90b8d8feb1e533cb866b0a6973e12
 app.factory('getFollowing', function ($http, $rootScope, $stateParams) {
   return {
     all: function (userId) {
       return $http.get(Env()+'/following', { params: { id: userId } })
-<<<<<<< HEAD
+
     },
     count: function (userId) {
       return $http.get(Env()+'/following/count', { params: { id: userId } })
@@ -126,17 +123,49 @@ app.factory('chatStorage', function ($http, $rootScope, $stateParams) {
       return $http.post(Env()+'/chat/updateMessageById', {messages: msjObj})
     }
 
-=======
-    }
->>>>>>> a4a2155793a90b8d8feb1e533cb866b0a6973e12
   };
 });
+
+
+app.factory('wishStorage', function ($http, $rootScope, $stateParams) {
+  return {
+    postWish: function (wishObj) {
+      return $http.post(Env()+'/wish', wishObj)
+    },
+
+    getWishByUser: function(userId){
+        return $http.get(Env()+'/wishes/user/'+userId);
+    },
+
+    getGrantedByUser: function(userId){
+        return $http.get(Env()+'/granted/user/'+userId);
+    },
+
+    setGranted: function(wishObj){
+        return $http.post(Env()+'/wish/grant/', wishObj);
+    },
+
+    // getChatIdByusers: function(uid, auid){
+    //     return $http.get(Env()+'/chat/hasChat/'+uid+'/'+auid);
+    // },
+
+    // getNewMessages: function (chatId, userId) {
+    //   return $http.get(Env()+'/chat/getNewMessage/'+chatId+'/'+userId )
+    // },
+
+    // setReadMessage: function(msjObj){
+    //   return $http.post(Env()+'/chat/updateMessageById', {messages: msjObj})
+    // }
+
+  };
+});
+
 
 app.factory('getFollowers', function ($http, $rootScope, $stateParams) {
   return {
     all: function (userId) {
       return $http.get(Env()+'/followers', { params: { id: userId } })
-<<<<<<< HEAD
+
     },
     count: function (userId) {
       return $http.get(Env()+'/followers/count', { params: { id: userId } })
@@ -156,10 +185,6 @@ app.factory('Poller', function($http,$q){
         }
 
     }
-=======
-    }
-  };
->>>>>>> a4a2155793a90b8d8feb1e533cb866b0a6973e12
 });
 
 app.factory('indexList', function () {

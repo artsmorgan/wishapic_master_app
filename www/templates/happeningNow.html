@@ -17,28 +17,24 @@
         </span></h2>
     <div class="profileCardsContainer">
 
-      <div class="profileCard" ng-repeat="card in cards">
+      <div class="profileCard hp-cards" ng-repeat="card in cards track by $index">
         <div class="profileCard__content">
           <div class="profileCard__picturePlaceholder">
-            <img class="profileCard__picture" data-ng-src="{{card.urlPicture}}" id="{{card._id}}"
+            <img class="profileCard__picture" data-ng-src="{{card.urlPicture}}" id="{{card.id}}"
                   ng-style="{'background-image':'url(data:image/jpeg;base64,{{card.url}})'}" on-touch="getHappeningNow($event)"/>
           </div>
           <div class="profileCard__info">
             <div class="userBlock">
-<<<<<<< HEAD
+
               <img class="userBlock__profilePicture userBlock__profilePicture_medium userBlock__profilePicture_overlapTop" ng-src="{{card.avatar}}" id="{{card.userId}}" on-touch="getProfile($event)">
-=======
-              <img class="userBlock__profilePicture userBlock__profilePicture_medium userBlock__profilePicture_overlapTop" ng-src="{{card.profilePicture}}">
->>>>>>> a4a2155793a90b8d8feb1e533cb866b0a6973e12
               <div class="userBlock__info">
                 <span class="userBlock__info__name">{{card.username}}</span>
               </div>
             </div>
             <p class="profileCard__comment">{{card.description}}</p>
-<<<<<<< HEAD
+
             <p class="profileCard__comment">{{card.location}}</p>
-=======
->>>>>>> a4a2155793a90b8d8feb1e533cb866b0a6973e12
+
           </div>
           <div class="tagsContainer">
             <span class="tag tag_pink" ng-repeat="tag in card.tags">{{tag}}</span>

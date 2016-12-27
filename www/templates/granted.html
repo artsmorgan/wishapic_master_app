@@ -2,11 +2,14 @@
 	<div class="bar bar-header">
     <div class="list">
       <div class="item">
-        <a class="arrow" href="#/happeningNow"><i class="ion-ios-arrow-thin-left"></i></a>
+        <!-- <a class="arrow" href="#/happeningNow"><i class="ion-ios-arrow-thin-left"></i></a> -->
+        <!-- <ion-nav-back-button class="button-clear arrow"><i class="ion-ios-arrow-thin-left"></i></ion-nav-back-button> -->
+        <a class="arrow" on-touch="myGoBack()"><i class="ion-ios-arrow-thin-left"></i></a>
+
       </div>
     </div>
 </div>
-	<ion-content class="padding" data-ng-init="usersAll()">
+	<ion-content class="padding">
 		<div class="list">
             <div class="item"></div>
             <div class="item center">
@@ -15,11 +18,11 @@
             
             <div class="item uppercase">
                 <ul class="mobileList">
-                    <li class="item" ng-repeat="user in usersList">
-                        <img class="title-image pinky" src="{{user.grantedPicture}}" width="110px" />
+                    <li class="item" ng-repeat="grant in granted">
+                        <img class="title-image pinky" src="{{grant.avatar}}" width="110px" id="{{wish.id}}" on-touch="setLiveOk($event)"/>
                         <div class="textbox">
-                            <p>{{user.grantedName}}</p>
-                            <h6>{{user.grantedLocation}}</h6>
+                            <p>{{grant.username}}</p>
+                            <h6>{{grant.location}}</h6>
                         </div>  
                     </li>                   
                 </ul>

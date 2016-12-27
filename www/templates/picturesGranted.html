@@ -6,7 +6,7 @@
     <a class="ion-ios-arrow-thin-left buttonBack buttonBack_gray" href="#/happeningNow"></a>
     <h2 class="title_button title_gray center">Happening Now</h2>
     <div class="buttonPlaceholder">
-      <a class="button icon button_logo_green"></a>
+      <button class="button icon button_logo_green" on-touch="requestWish($event)"></button>
     </div>
     <div class="profileCard profileCard_fullWidth">
       <div class="profileCard__content">
@@ -17,14 +17,14 @@
         </div>
         <div class="profileCard__info">
           <div class="userBlock">
-            <img class="userBlock__profilePicture userBlock__profilePicture_overlapTop" ng-src="{{user.avatar}}">
+            <img class="userBlock__profilePicture userBlock__profilePicture_overlapTop" ng-src="{{user.avatarUrl}}">
             <div class="userBlock__info">
               <span class="userBlock__info__name">{{user.username}}</span>
             </div>
           </div>
           <p class="profileCard__comment">{{picture.description}}</p>
         </div>
-        <div class="tagsContainer">
+        <div class="pg tagsContainer">
           <span class="tag tag_pink" ng-repeat="tag in picture.tags">{{tag}}</span>
         </div>
       </div>
@@ -38,7 +38,7 @@
         </div>
         <div class="pictureGranted__usersContainer">
           <div class="userBlock userBlock_whiteShadow">
-            <img class="userBlock__profilePicture" ng-src="{{user.profilePicture}}">
+            <img class="userBlock__profilePicture" ng-src="{{user.avatarUrl}}">
             <div class="userBlock__info">
               <span class="userBlock__info__name">{{user.username}}</span>
               <span class="userBlock__info__location">{{picture.location}}</span>

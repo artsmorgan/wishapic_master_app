@@ -21,11 +21,7 @@ app.controller('addPicCtrl', function ($scope, CONFIG,$state, $location, $cordov
                
     function cameraOn(){
         var options = {
-<<<<<<< HEAD
             quality: 1,
-=======
-            quality: 5,
->>>>>>> a4a2155793a90b8d8feb1e533cb866b0a6973e12
             destinationType: Camera.DestinationType.DATA_URL,
             sourceType: Camera.PictureSourceType.CAMERA,
             allowEdit: false,
